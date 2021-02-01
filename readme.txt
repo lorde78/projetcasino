@@ -1,9 +1,10 @@
 Projet cours FRONT-END
-Antoine
-Cherine
-Cyril
-Basil
-Mélissande
-Théo
+Antoine A
+Cherine Z
+Cyril FEZ
+Basil FF
+Mélissande FEF
+Théo FGEF
 
 C'est la joie et la bonne humeur
+
