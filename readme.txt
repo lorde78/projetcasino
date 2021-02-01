@@ -3,7 +3,7 @@ Antoine
 Cherine
 Cyril
 Basil
-Melissande
+Mélissande
 Théo
 
 C'est la joie et la bonne humeur
