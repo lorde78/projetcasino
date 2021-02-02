@@ -9,6 +9,8 @@ color:azure;
 header{
     grid-area: 1 / 1 / 2 / 4;
     display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 header h1{
