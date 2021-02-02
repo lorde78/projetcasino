@@ -1,0 +1,34 @@
+body{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+background-color:aquamarine;
+color:azure;
+}
+
+header{
+    grid-area: 1 / 1 / 2 / 4;
+    display:flex;
+}
+
+header h1{
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    display:flex;
+    flex-direction:row;
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+nav ul{
+    margin: 0;
+    display: flex;
+    padding: 0;
+}
+
+main{
+    grid-area:2/ 1 / 10 / 4;
+}
+
