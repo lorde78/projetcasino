@@ -17,6 +17,7 @@
                 height:100px;
                 width:100px;
                 position:fixed;
+                margin-top:100px;
             }
 
             .blue{
@@ -55,5 +56,26 @@
         <a href=""><article class="blue"></article></a>
         <a href=""><article class="red"></article></a>
         <a href=""><article class="green"></article></a>
+
+        <button>Ajouter un carré</button>
+
+        <article></article>
+
+        <script>
+        
+            var b1 = document.querySelector( 'button ');
+            console.dir( document );
+            var x = document.querySelector( 'body' );
+            b1.addEventListener('click' , addSquare());
+            
+
+            function addSquare(){
+                for ( let i = 0 ; i < 1000 ; i++ ){
+                        document.querySelector( 'body' ).innerHTML += "<div>";
+                        div.className = 'blue';  
+                }
+            }
+
+        </script>
     </body>
 </html>
