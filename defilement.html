@@ -4,25 +4,56 @@
         <meta charset="UTF-8" />
         <title>défilement</title>
         <style>
-            button{
+            html{           /*Que HTML prenne la taille de ton navigateur*/
+                height:100%;
+                margin:0 auto;
+            }
+
+            body{
+                min-height:100%;
+            }
+
+            article{
                 height:100px;
                 width:100px;
-                background-color:blue;
                 position:fixed;
             }
-            button:active{
-                transition-property:color;
-                transition-duration:2s;
+
+            .blue{
+                background-color:blue;
+                z-index:3;
+                animation: moove 5s;
+                animation-iteration-count: 1;
+            }
+
+            .red{
                 background-color:red;
+                z-index:2;
+                animation: moove 5s 6s;
+                animation-iteration-count: 1;
             }
-            button:hover{
-                transform: translateX(100px);
-                transition-duration:5s;
-                
+
+            .green{
+                background-color:green;
+                z-index:1;
+                animation: moove 5s 12s;
+                animation-iteration-count: 1;
             }
+
+            @keyframes moove{
+                0%{
+
+                }
+                100%{
+                    transform: translateX(220px);
+                }
+            }
+
         </style>
     </head>
     <body>
-        <a href=""><button></button></a>
+        <a href=""><article class="blue"></article></a>
+        <a href=""><article class="red"></article></a>
+        <a href=""><article class="green"></article></a>
     </body>
 </html>
