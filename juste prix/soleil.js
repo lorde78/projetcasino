@@ -6,11 +6,12 @@
 //console.log(ChiffreRentre)
 
 
-function Valider() {
+function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
     //console.log(input.innerHTML)
     console.log(RecupChiffre)
 }
+
 
 //if (ChiffreAleatoire == RecupChiffre){
     //console.log(RecupChiffre)
