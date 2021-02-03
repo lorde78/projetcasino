@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+		<title>Clicker</title>
+		<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+		<style>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Taligame</title>
-    <!--A changer-->
-    <link href="tali.css" rel="stylesheet" />
-</head>
-
-<body>
-    <header>
-        <h1>TickTack</h1>
-        <nav>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </nav>
-    </header>
-    <aside>
-        
-    </aside>
+		</style>
+    </head>
     <body>
-        <main></main>
-    </body>
-</body>
+        <div>
+            <button onclick="reset()">Remettre à zéro</button>
+            <button onclick="clique()">Cliquer</button>
+            <p>Clique : 0</p>
+        </div>
+    
+        <script>
+            var compteur = 0;
 
+            function clique() {
+                compteur = compteur + 1;
+                document.querySelector("p").innerHTML = "<p>Cliques : " + compteur;
+            }
+            
+            function reset() {
+                compteur = 0;
+                document.querySelector("p").innerHTML = "<p>Clique : " + compteur;
+
+            }
+        </script>
+    </body>
 </html>
