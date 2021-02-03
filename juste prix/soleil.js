@@ -4,11 +4,12 @@
 
 //var ChiffreRentre = input.innerHTML ; 
 //console.log(ChiffreRentre)
-var RecupChiffre = document.querySelector("input") ;
+
 
 function Valider() {
+    var RecupChiffre = document.getElementById("recup").value ;
+    //console.log(input.innerHTML)
     console.log(RecupChiffre)
-    alert(RecupChiffre)
 }
 
 //if (ChiffreAleatoire == RecupChiffre){
