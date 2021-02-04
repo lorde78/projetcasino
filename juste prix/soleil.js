@@ -1,16 +1,11 @@
 
-
-
-//var ChiffreRentre = input.innerHTML ; 
-//console.log(ChiffreRentre)
-
-
 let ChiffreAleatoire = Math.floor(Math.random()*100);
     console.log(ChiffreAleatoire);
 
 var clicks = 0;
 var score1 = 0;
 var score2 = 0;
+
 
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
@@ -27,10 +22,10 @@ function ValiderChoix() {
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
-            alert("C'est trop ");
+            document.getElementById("moins").style.display = "block";
         } else {
             if (RecupChiffre < ChiffreAleatoire){
-                alert("C'est pas assez ");
+                document.getElementById("plus").style.display = "block";
             }else {
                 if(RecupChiffre == ChiffreAleatoire) {
                     alert("Cool");
@@ -45,18 +40,3 @@ function ValiderChoix() {
     if (score1 > 0) {
         document.getElementById("recup").style.display =="none";
     }
-}
-
-//.style.display = "none"
-
-
-
-
-
-
-
-//if (ChiffreAleatoire == RecupChiffre){
-    //console.log(RecupChiffre)
-    //} else {
-    //    alert("non")
-    //
