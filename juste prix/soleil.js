@@ -9,34 +9,41 @@ let ChiffreAleatoire = Math.floor(Math.random()*100);
     console.log(ChiffreAleatoire);
 
 var clicks = 0;
+var score1 = 0;
 
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
-    console.log(RecupChiffre)
-    if (RecupChiffre > ChiffreAleatoire) {
-        alert("C'est trop ")
-    } else {
-        if (RecupChiffre < ChiffreAleatoire){
-            alert("C'est pas assez ")
-        }
-    else {
-        if (RecupChiffre == ChiffreAleatoire){
-            alert("Cool")
+    console.log(RecupChiffre);
+    clicks += 1;
+    document.getElementById("recup").innerHTML = clicks;
+   
+    if (clicks == 4){
+        if(RecupChiffre == ChiffreAleatoire) {
+            alert("Cool");
+            clicks= 0;
+        }else {
+                alert("tu as perdu");
+                clicks= 0;
             }
-        }
-        clicks += 1;
-        document.getElementById("recup").innerHTML = clicks;
-        console.log(clicks)
-        if (clicks == 4){
-            alert("finito")
-        }
-    }
-    // var RecupChiffre = 0 ;
-        // RecupChiffre = RecupChiffre +1 ;
-        // console.log(RecupChiffre);
+    } else {
+        if (RecupChiffre > ChiffreAleatoire) {
+            alert("C'est trop ");
+        } else {
+            if (RecupChiffre < ChiffreAleatoire){
+                alert("C'est pas assez ");
+            }else {
+                if(RecupChiffre == ChiffreAleatoire) {
+                    alert("Cool");
+                    score1 = clicks
+                    console.log(score1)
+                    clicks= 0;
 
-    
+            }
+
+    }
 }
+}}
+
 
 
 
