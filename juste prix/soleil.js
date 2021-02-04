@@ -35,12 +35,10 @@ function ValiderChoix() {
                 if(RecupChiffre == ChiffreAleatoire) {
                     alert("Cool");
                     score1 = clicks
-                        document.getElementById("recup2").style.display = "block";
-                        document.getElementById("recup").style.display = "none";
-                        document.getElementById("button2").style.display = "block";
-                        document.getElementById("button").style.display = "none" ;
-                    
-                    
+                    document.getElementById("recup2").style.display = "block";
+                    document.getElementById("recup").style.display = "none";
+                    document.getElementById("button2").style.display = "block";
+                    document.getElementById("button").style.display = "none" ;
                 }
             }
         }           
