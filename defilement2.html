@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>Casinofront</title>
+		<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+		<style>
+            
+            h1 {
+                font-weight: 900;
+                font-size: 50px
+            }
+            p {
+                font-weight:900;
+            }
+            
+            article {
+                background-color:black;
+                height:500px
+            }
+            div{
+               height:200px;
+               width:100px;
+               margin-top: 200px;
+               display:flex;
+               justify-content: center;
+               font-size: 2rem;
+            }
+            section {
+                position:relative;
+            }
+            div.facile {
+                    background-color:green;
+                position:absolute;
+                top:10px;
+                left:10px;
+                animation: mouvement 3s linear;
+            }
+
+            div.moyen {
+                background-color:cyan;
+                position:absolute;
+                top:10px;
+                left:10px;
+                animation: mouvement 3s linear;
+            }
+            div.hard {
+                background-color:orange;
+                position:absolute;
+                top:10px;
+                left:10px;
+                animation: mouvement 3s linear;
+            }
+            div.impossible {
+                background-color:red;
+                position:absolute;
+                top:10px;
+                left:10px;
+                animation: mouvement 3s linear;
+            }
+
+            @Keyframes mouvement {
+                    from {
+                        margin-left: 0%;
+                    }
+                    to {
+                        margin-left: 80%;
+                    }
+                }
+
+
+		</style>
+    </head>
+    <body>
+        <h1></h1>
+        <!-- Mes boutons de difficultés -->
+        <button onclick="Diff1()">Difficulté 1 : Facile</button>
+        <button onclick="Diff2()">Difficulté 2 : Moyen</button>
+        <button onclick="Diff3()">Difficulté 3 : Hard</button>
+        <button onclick="Diff4()">Difficulté 4 : Impossible</button>
+        <article>
+            <section>
+
+            </section>
+        </article>
+
+        <script>
+            NbBody = 50
+
+
+            function Diff1 () {
+                
+                document.querySelector("section").innerHTML = ""
+                document.querySelector("h1").innerHTML = "GO ! FACILE"
+                for (var index=0 ; index < NbBody ; index+=1.25 ) {
+                    console.log("index")
+                    document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + index + "s'<p>o _ o</p></div>"
+                }
+            }
+            function Diff2 () {
+                document.querySelector("section").innerHTML = ""
+                document.querySelector("h1").innerHTML = "GO ! MOYEN"
+                for (var index=0 ; index < NbBody ; index+=1 ) {
+                    console.log("index")
+                    document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + index + "s'<p>O _ O</p></div>"
+                }
+            }
+            function Diff3 () {
+                document.querySelector("section").innerHTML = ""
+                document.querySelector("h1").innerHTML = "GO ! HARD"
+                for (var index=0 ; index < NbBody ; index+=0.75 ) {
+                    console.log("index")
+                    document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + index + "s'<p>* _ *</p></div>"
+                }
+            }
+            function Diff4 () {
+                document.querySelector("h1").innerHTML = "GO ! IMPOSSIBLE"
+                document.querySelector("section").innerHTML = ""
+                for (var index=0 ; index < NbBody ; index+=0.5 ) {
+                    console.log("index")
+                    document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + index + "s'<p>* o *</p></div>"
+                }
+            }
+
+
+
+        </script>
+    </body>
+</html>
