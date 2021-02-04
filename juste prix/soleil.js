@@ -15,10 +15,15 @@ function ValiderChoix() {
     if (clicks == 4){
         if(RecupChiffre == ChiffreAleatoire) {
             alert("Cool");
-            clicks= 0;
+            score1 = clicks
+            console.log(score1)
+            document.getElementById("recup2").style.display = "block";
+            document.getElementById("recup").style.display = "none";
+            document.getElementById("button2").style.display = "block";
+            document.getElementById("button").style.display = "none" ;
+            
         }else {
                 alert("tu as perdu");
-                clicks= 0;
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
@@ -30,13 +35,16 @@ function ValiderChoix() {
                 if(RecupChiffre == ChiffreAleatoire) {
                     alert("Cool");
                     score1 = clicks
-                    console.log(score1)
-                    clicks= 0;
-                    console.log(score1)
+                        document.getElementById("recup2").style.display = "block";
+                        document.getElementById("recup").style.display = "none";
+                        document.getElementById("button2").style.display = "block";
+                        document.getElementById("button").style.display = "none" ;
+                    
+                    
                 }
             }
         }           
     }
-    if (score1 > 0) {
-        document.getElementById("recup").style.display =="none";
+    
     }
+    

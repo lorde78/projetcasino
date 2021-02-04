@@ -20,6 +20,7 @@ html{
     justify-content: center;
 }
 
+
 #plus {
     background-color: blue;
     grid-row: 3;
@@ -38,4 +39,20 @@ html{
     margin-bottom: 10px;
     display: none;
     text-align: center;
+}
+
+#button{
+    display : "";
+}
+
+#button2 {
+    display : none;
+}
+
+#recup {
+    display : ""
+}
+
+#recup2 {
+    display : none;
 }
