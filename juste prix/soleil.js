@@ -10,10 +10,10 @@ function ValiderChoix() {
     console.log(RecupChiffre)
     
     if (RecupChiffre > ChiffreAleatoire) {
-        document.getElementById("moins").style={display: "block"};
+        document.getElementById("moins").style.display = "block";
     } else {
         if (RecupChiffre < ChiffreAleatoire){
-            document.getElementById("plus").style={display: "block"};
+            document.getElementById("plus").style.display = "block";
         }
     
     else {
