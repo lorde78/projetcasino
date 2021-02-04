@@ -1,9 +1,6 @@
-
 let ChiffreAleatoire = Math.floor(Math.random()*100);
     console.log(ChiffreAleatoire)
 
-/*let moins = document.getElementById(moins)*/
-/*let plus = document.getElementById(plus)*/
 
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
@@ -23,12 +20,3 @@ function ValiderChoix() {
     }
     }
 }
-
-
-
-
-//if (ChiffreAleatoire == RecupChiffre){
-    //console.log(RecupChiffre)
-    //} else {
-    //    alert("non")
-    //
