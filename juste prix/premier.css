@@ -1,3 +1,6 @@
+
+
+
 html{
     background-color: grey;
 }
@@ -8,13 +11,17 @@ html{
     background-color: black;
     grid-template-columns: 1fr 80% 1fr;
     grid-template-rows: 10% 20% 1fr;
-    height: 400px;
+    height: 600px;
 }
 
 #input{
-    padding-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color: pink;
     grid-row: 2/3;
     grid-column: 2/3;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
