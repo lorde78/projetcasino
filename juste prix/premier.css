@@ -25,3 +25,13 @@ html{
     align-items: center;
     justify-content: center;
 }
+
+#plus {
+    background-color: blue;
+    display: none;
+}
+
+#moins {
+    background-color: blue;
+    display: none;
+}
