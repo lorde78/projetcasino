@@ -9,13 +9,20 @@
 <body>
     <section id="grid">
         <article id="input"> 
+            <!--PARTIE 1 -->
             <label for="ChiffreADeviner"> </label>
-            
             <input type="tel" id="recup" name="ChiffreADeviner" placeholder="Devinez le chiffre " >
-            <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
+            <button id="button" type="button"  onclick="ValiderChoix();"> Valider </button>
 
-            <button id="button" type="button" onclick="ValiderChoix();"> Valider </button>
+            <!-- PARTIE 2-->
+                <!--PHASE 1 : Entrer un chiffre -->
+            <label for"PlacerChiffre"></label>
+            <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
             <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
+                <!-- PHASE 2 : Dire si c'est plus ou moins -->
+            <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
+            <button id="buttonMoins" type="button" onclick="EnregistrerChoix()"> C'est moins </button>
+
         </article>
 
         <section id="plus">
@@ -25,6 +32,9 @@
         <section id="moins">
             <p>C'est moins</p>
         </section>
+
+        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span>
+        </span>
 
     </section>
 </body>

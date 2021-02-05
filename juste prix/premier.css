@@ -56,3 +56,22 @@ html{
 #recup2 {
     display : none;
 }
+
+#buttonPlus {
+    display : none;
+    
+}
+
+#buttonMoins {
+    display : none;
+  
+}
+#BlocChiffreAleatoire {
+    background-color: blue;
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+}
