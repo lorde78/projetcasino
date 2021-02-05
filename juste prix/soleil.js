@@ -15,7 +15,7 @@ function ValiderChoix() {
     console.log(RecupChiffre);
     clicks += 1;
     document.getElementById("recup").innerHTML = clicks;
-    if (clicks == 5){
+    if (clicks == 12    ){
         if(RecupChiffre == ChiffreAleatoire) {
             alert("Cool");
             score1 = clicks
@@ -65,7 +65,6 @@ function EnregistrerChoix(){
         document.getElementById("buttonMoins").style.display = "block";
         Ensuite()
     }
-
         }
     
 function Ensuite(){
@@ -74,8 +73,6 @@ function Ensuite(){
     i = ChiffreAleatoire2
     console.log(i)
     document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
-    
-    
 }
 
         //clicks2 += 1;
@@ -87,18 +84,14 @@ function CestMoins(){
     alert("c moins")
         clicks2 += 1;
         min = i 
-        let ChiffreAleatoire3 = Math.floor(Math.random()*(max - i) + i);
+        let ChiffreAleatoire3 = Math.floor(Math.random()*(max - min) + min);
         console.log(ChiffreAleatoire3)
     }
 
-
-
-    
 function CestPlus(){
     clicks2 += 1;
     console.log(clicks2)
     alert("C'est plus")
-
 }
 
     /*function CestMoins(){
