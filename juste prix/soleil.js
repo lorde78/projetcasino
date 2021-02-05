@@ -46,50 +46,61 @@ function ValiderChoix() {
     
     }
     
-    function EnregistrerChoix(){
-        console.log(score1)
-        document.getElementById("recup2").style.display = "block";
-        document.getElementById("recup").style.display = "none";
-        document.getElementById("button2").style.display = "block";
-        document.getElementById("button").style.display = "none" ;
-        document.getElementById("plus").style.display = "none";
-        document.getElementById("moins").style.display = "none";
+function EnregistrerChoix(){
+    console.log(score1)
+    document.getElementById("recup2").style.display = "block";
+    document.getElementById("recup").style.display = "none";
+    document.getElementById("button2").style.display = "block";
+    document.getElementById("button").style.display = "none" ;
+    document.getElementById("plus").style.display = "none";
+    document.getElementById("moins").style.display = "none";
 
-        var ValeurEnregistre = document.getElementById("recup2").value
-        console.log(ValeurEnregistre)
+    var ValeurEnregistre = document.getElementById("recup2").value
+    console.log(ValeurEnregistre)
 
-        if (ValeurEnregistre>0){
-            document.getElementById("button2").style.display = "none";
-            document.getElementById("recup2").style.display = "none";
-            document.getElementById("buttonPlus").style.display = "block";
-            document.getElementById("buttonMoins").style.display = "block";
-            Ensuite()
-        }
+    if (ValeurEnregistre>0){
+        document.getElementById("button2").style.display = "none";
+        document.getElementById("recup2").style.display = "none";
+        document.getElementById("buttonPlus").style.display = "block";
+        document.getElementById("buttonMoins").style.display = "block";
+        Ensuite()
+    }
 
         }
     
-        function Ensuite(){
-        document.getElementById("BlocChiffreAleatoire").style.display = "block";
-            let ChiffreAleatoire2 = Math.floor(Math.random()*max);
-            i = ChiffreAleatoire2
-            console.log(i)
-            
-            document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
-            
-            clicks2 += 1;
-            if (document.getElementById("buttonMoins").innerHTML < clicks2){
-                alert("C'est Moins")
-        }
-    }
+function Ensuite(){
+    document.getElementById("BlocChiffreAleatoire").style.display = "block";
+    let ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
+    i = ChiffreAleatoire2
+    console.log(i)
+    document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
+    
+    
+}
+
         //clicks2 += 1;
         //if (document.getElementById("buttonMoins").innerHTML < clicks2){
         //    alert("C'est Moins")
         //}
-    
-    function CestPlus(){
-       alert("C'est plus")
 
+function CestMoins(){
+    alert("c moins")
+        clicks2 += 1;
+        min = i 
+        let ChiffreAleatoire3 = Math.floor(Math.random()*(max - i) + i);
+        console.log(ChiffreAleatoire3)
     }
+
+
+
+    
+function CestPlus(){
+    clicks2 += 1;
+    console.log(clicks2)
+    alert("C'est plus")
+
+}
+
     /*function CestMoins(){
         alert("C'est Moins")
         if (i > ValeurEnregistre){
