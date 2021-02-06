@@ -14,15 +14,22 @@ var compt_pop = 0;
 
 var contenu = document.querySelector("#contenu");
 
-var pop_up = document.querySelector(".pop_up");
+//var pop_up = document.querySelector(".pop_up");
 
 var plus = contenu.createElement("section");
-plus.class="pop_up";
+plus.class=("pop_up");
 plus.textContent="C'est plus";
 
+var plus_bis= plus;
+plus_bis.classList.add("pop_up_bis");
+
 var moins = contenu.createElement("section");
-moins.class="pop_up";
+moins.class=("pop_up");
 moins.textContent="C'est moins";
+
+var moins_bis= moins;
+moins_bis.classList.add("pop_up_bis");
+
 // --------------------------------------------------------------
 
 // Partie Cherine
@@ -58,8 +65,9 @@ function ValiderChoix() {
             }
             
             else {
-                moins.insertBefore(moins,);
-            } // élément avant à définir
+                moins = moins_bis
+                contenu.insertBefore(moins, ".pop_up-bis");
+            }
         }
         else if (RecupChiffre < ChiffreAleatoire) {
                 if (compt_pop == 0) {
@@ -69,8 +77,8 @@ function ValiderChoix() {
                 }
 
             else {
-                plus.insertBefore(plus,);
-            } // élément avant à définir
+                contenu.insertBefore(plus, ".pop_up-bis");
+            }
 // -----------------------------------------------------------------------------
 
 // Partie Chérine
