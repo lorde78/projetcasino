@@ -2,7 +2,7 @@ html{
     background-color: grey;
 }
 
-#block{
+#contenu{
     margin: 50px;
     padding: 20px;
     background-color: black;
@@ -25,15 +25,6 @@ html{
     margin-bottom: 10px;
     text-align: center;
 }
-
-#plus {
-    display: none;
-}
-
-#moins {
-    display: none;
-}
-
 
 #button{
     display : "";

@@ -1,19 +1,32 @@
-
+// Partie Cherine
+// --------------------------------------------------------------------
 let ChiffreAleatoire = Math.floor(Math.random()*100);
     console.log(ChiffreAleatoire);
 
 var clicks = 0;
 var score1 = 0;
 var score2 = 0;
+// ------------------------------------------------------------------
 
+// Partie méli
+// ---------------------------------------------------------------
 var compt_pop = 0;
 
-var node = document.getElementById("input");
-var pop_up = document.getElementsByClassName("pop_up");
-var plus = document.getElementById("plus");
-var moins = document.getElementById("moins");
+var contenu = document.querySelector("#contenu");
 
+var pop_up = document.querySelector(".pop_up");
 
+var plus = contenu.createElement("section");
+plus.class="pop_up";
+plus.textContent="C'est plus";
+
+var moins = contenu.createElement("section");
+moins.class="pop_up";
+moins.textContent="C'est moins";
+// --------------------------------------------------------------
+
+// Partie Cherine
+// ---------------------------------------------------------------
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
@@ -32,27 +45,36 @@ function ValiderChoix() {
         }else {
                 alert("tu as perdu");
             }
+// ----------------------------------------------------------------------
+
+// Partie méli
+// ---------------------------------------------------------------------------
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
             if (compt_pop == 0) {
-                moins.appendChild(node);
-                ("moins").style.display = "block";
+                contenu.appendChild(moins);
                 compt_pop = 1;
+                return compt_pop;
             }
             
             else {
-                node.insertBefore(moins)
-            }
+                moins.insertBefore(moins,);
+            } // élément avant à définir
+        }
+        else if (RecupChiffre < ChiffreAleatoire) {
+                if (compt_pop == 0) {
+                    contenu.appendChild(plus);
+                    compt_pop = 1;
+                    return compt_pop;
+                }
 
-        } else if (RecupChiffre < ChiffreAleatoire){
-            if (compt_pop == 0) {
-                document.getElementById("plus").style.display = "block";
-                compt_pop = 1;
-            }
             else {
-                //document.getElementById("plus").style.display = "block";
-            }
+                plus.insertBefore(plus,);
+            } // élément avant à définir
+// -----------------------------------------------------------------------------
 
+// Partie Chérine
+// -----------------------------------------------------------------------------
         }else {
             if(RecupChiffre == ChiffreAleatoire) {
                 alert("Cool");
