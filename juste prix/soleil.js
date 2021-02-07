@@ -14,8 +14,6 @@ var compt_pop = 0;
 
 var contenu = document.querySelector("#contenu");
 
-//var pop_up = document.querySelector(".pop_up");
-
 var plus = contenu.createElement("section");
 plus.class=("pop_up");
 plus.textContent="C'est plus";
@@ -65,18 +63,19 @@ function ValiderChoix() {
             }
             
             else {
-                moins = moins_bis
+                moins = moins_bis;
                 contenu.insertBefore(moins, ".pop_up-bis");
             }
         }
         else if (RecupChiffre < ChiffreAleatoire) {
-                if (compt_pop == 0) {
-                    contenu.appendChild(plus);
-                    compt_pop = 1;
-                    return compt_pop;
-                }
+            if (compt_pop == 0) {
+                contenu.appendChild(plus);
+                compt_pop = 1;
+                return compt_pop;
+            }
 
             else {
+                plus = plus_bis;
                 contenu.insertBefore(plus, ".pop_up-bis");
             }
 // -----------------------------------------------------------------------------
