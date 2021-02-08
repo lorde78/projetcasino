@@ -97,7 +97,7 @@
         <div id="clicker">
             <button onclick="reset()">Remettre à zéro</button>
             <button onclick="clique()">Cliquer</button>
-            <p>Clique : 0</p>
+            <p id="cliks">Clique : 0</p>
         </div>
 
         <script>
@@ -160,12 +160,12 @@
 
             function clique() {
                 compteur = compteur + 1;
-                document.querySelector("p").innerHTML = "<p>Cliques : " + compteur;
+                document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
             }
 
             function reset() {
                 compteur = 0;
-                document.querySelector("p").innerHTML = "<p>Clique : " + compteur;
+                document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;
             }
         </script>
     </body>
