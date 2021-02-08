@@ -59,63 +59,48 @@ function EnregistrerChoix(){
         document.getElementById("recup2").style.display = "none";
         document.getElementById("buttonPlus").style.display = "block";
         document.getElementById("buttonMoins").style.display = "block";
-        Ensuite()
+        document.getElementById("buttonCestCa").style.display = "block";
+        document.getElementById("BlocChiffreAleatoire").style.display = "block";
+        document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
+        console.log(ChiffreAleatoire2)
     }}
     
-function Ensuite(){
-    document.getElementById("BlocChiffreAleatoire").style.display = "block";
-    document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
-    console.log(ChiffreAleatoire2)
-}
-
-/*function OuiOui(){
-    console.log(ChiffreAleatoire2) ; 
-    console.log(ValeurEnregistre) ; 
-    var cestmoins = document.getElementById("buttonMoins").innerHTML ;
-    var cestplus = document.getElementById("buttonMoins").innerHTML ; 
-
-
-    if(cestmoins){
-
-        max = ChiffreAleatoire2
-        alert("oui")
-        console.log(max)
-    } else (cestplus);{
-        min = ChiffreAleatoire2
-        console.log(max)
-        console.log(min)
-        document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
-    }
-}*/
-
 function CestMoins(){
     alert("c moins")
     clicks2 += 1;
+    console.log(clicks2)
+    if (clicks == 12) {
+        document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non j'ai perdu... "
+    } else {
     max = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
     document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
     console.log(min)
     console.log(max)
     }
+    }
 
 function CestPlus(){
     alert("C'est plus")
     clicks2 += 1;
+    console.log(clicks2)
+    if (clicks == 12) {
+        document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non j'ai perdu... "
+    } else {
     min = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
     document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
     console.log(ChiffreAleatoire2)
     console.log(min)
     console.log(max)
+}
 } 
 
-
-    /*function CestMoins(){
-        alert("C'est Moins")
-        if (i > ValeurEnregistre){
-            max = i
-            let ChiffreAleatoire3 = Math.floor(Math.random()* (max - min) + min);
-            document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire3;
-
-        }
-    } */
+function CestCa(){
+    if (ValeurEnregistre == ChiffreAleatoire2){
+        alert("C'est coool")
+    } else{
+        aler("Hmmm, pas si sûr")
+    }
+    
+}

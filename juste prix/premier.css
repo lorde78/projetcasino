@@ -64,8 +64,12 @@ html{
 
 #buttonMoins {
     display : none;
-  
 }
+
+#buttonCestCa{
+    display : none;
+}
+
 #BlocChiffreAleatoire {
     background-color: blue;
     grid-row: 3;
