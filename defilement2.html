@@ -10,6 +10,7 @@
                 font-weight: 900;
                 font-size: 50px
             }
+
             p {
                 font-weight:900;
                 font-size: 1.5rem;
@@ -20,6 +21,7 @@
                 background-color:black;
                 height:500px
             }
+
             div{
                height:200px;
                width:100px;
@@ -28,9 +30,11 @@
                justify-content: center;
                font-size: 2rem;
             }
+
             section {
                 position:relative;
             }
+
             div.facile {
                 background-color:green;
                 position:absolute;
@@ -61,10 +65,21 @@
                 animation: mouvement 3s linear;
             }
 
-            div#clicker {
-                height:100px;
-                position:absolute;
-                left:50%
+            aside{
+                display:flex;
+                width:100%;
+                justify-content:center;
+            }
+
+            div.tali{
+                border: solid 3px black;
+                width: 8%;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 100px;
+                font-size:1rem;
+                justify-content: space-evenly;
             }
 
             @keyframes mouvement {
@@ -91,27 +106,49 @@
         <article>
             <section>
             </section>
+            
         </article>
         
         <!-- Le clicker -->
-        <div id="clicker">
+        <aside>
+        <div class="tali">
             <button onclick="reset()">Remettre à zéro</button>
             <button onclick="clique()">Cliquer</button>
             <p id="cliks">Clique : 0</p>
         </div>
+    </aside>
 
         <script>
-            var NbBody = 50;
+
+                    // Compteur
+            var compteur = 0;
+
+                    // Carré de jeu
+            var NbBody = 0
             var monLaunch = document.getElementById("launch");
             var compteur = 0;
 
+                    //Determine le nombre de carré
+            function getRandomIntInclusive(min, max) {
+                min = 40;
+                max = 50;
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+                console.log(max)
+                console.log(min)
+            }
 
+                    // Change la difficulté
             function SetDiff(Diff) { 
                 monLaunch.className = ""
                 monLaunch.classList.add(Diff)
             }
 
+
+                    // Lancer le jeu
             function Startgame() {
+                reset()
+                NbBody = getRandomIntInclusive(40, 50)
+                console.dir(NbBody)
                 var maDiff = document.getElementById("launch").className
                 console.log(maDiff)
 
@@ -158,6 +195,8 @@
                 }
             }
 
+            // Le clicker
+
             function clique() {
                 compteur = compteur + 1;
                 document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
@@ -167,6 +206,13 @@
                 compteur = 0;
                 document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;
             }
+
+
+            // Success
+            //function success(){
+            //    object.addEventListener("animationend", myScript);
+            //}
+            
         </script>
     </body>
 </html>
