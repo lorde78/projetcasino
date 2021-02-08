@@ -12,21 +12,35 @@ var score2 = 0;
 // ---------------------------------------------------------------
 var compt_pop = 0;
 
-var contenu = document.querySelector("#contenu");
+var pop_up = document.querySelector("section");
 
-var plus = contenu.createElement("section");
-plus.class=("pop_up");
-plus.textContent="C'est plus";
+var plus = document.createElement("div");
+plus.innerHTML += "<p class='pop_up premier'>C'est plus</p>";
 
-var plus_bis= plus;
-plus_bis.classList.add("pop_up_bis");
 
-var moins = contenu.createElement("section");
-moins.class=("pop_up");
-moins.textContent="C'est moins";
+var moins = document.createElement("div");
+moins.innerHTML += "<p class='pop_up premier'>C'est moins</p>";
 
-var moins_bis= moins;
-moins_bis.classList.add("pop_up_bis");
+function Plus() {
+    pop_up.appendChild(plus);
+}
+
+function Plus_bis() {
+    var plus_bis= plus;
+    plus_bis.classList.add("pop_up_bis");
+    pop_up.insertBefore(".premier", ".pop_up-bis");
+}
+
+function Moins() {
+    pop_up.appendChild(moins);
+}
+
+function Moins_bis() {
+    var moins_bis= moins;
+    moins_bis.classList.add("pop_up_bis");
+    pop_up.insertBefore(".premier", ".pop_up-bis");
+}
+
 
 // --------------------------------------------------------------
 
@@ -57,26 +71,24 @@ function ValiderChoix() {
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
             if (compt_pop == 0) {
-                contenu.appendChild(moins);
+                Moins();
                 compt_pop = 1;
                 return compt_pop;
             }
             
             else {
-                moins = moins_bis;
-                contenu.insertBefore(moins, ".pop_up-bis");
+                Moins_bis();
             }
         }
         else if (RecupChiffre < ChiffreAleatoire) {
             if (compt_pop == 0) {
-                contenu.appendChild(plus);
+                Plus();
                 compt_pop = 1;
                 return compt_pop;
             }
 
             else {
-                plus = plus_bis;
-                contenu.insertBefore(plus, ".pop_up-bis");
+                Plus_bis();
             }
 // -----------------------------------------------------------------------------
 
