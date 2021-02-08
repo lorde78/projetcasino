@@ -12,33 +12,35 @@ var score2 = 0;
 // ---------------------------------------------------------------
 var compt_pop = 0;
 
-var pop_up = document.querySelector("section");
+var contenu = document.querySelector("#contenu");
+var input = document.querySelector("#input");
+
 
 var plus = document.createElement("div");
 plus.innerHTML += "<p class='pop_up premier'>C'est plus</p>";
-
+console.dir(plus);
 
 var moins = document.createElement("div");
 moins.innerHTML += "<p class='pop_up premier'>C'est moins</p>";
 
 function Plus() {
-    pop_up.appendChild(plus);
+    contenu.appendChild(plus);
 }
 
 function Plus_bis() {
     var plus_bis= plus;
     plus_bis.classList.add("pop_up_bis");
-    pop_up.insertBefore(".premier", ".pop_up-bis");
+    contenu.insertBefore(".premier", ".pop_up-bis");
 }
 
 function Moins() {
-    pop_up.appendChild(moins);
+    contenu.appendChild(moins);
 }
 
 function Moins_bis() {
     var moins_bis= moins;
     moins_bis.classList.add("pop_up_bis");
-    pop_up.insertBefore(".premier", ".pop_up-bis");
+    contenu.insertBefore(".premier", ".pop_up-bis");
 }
 
 
@@ -74,8 +76,7 @@ function ValiderChoix() {
                 Moins();
                 compt_pop = 1;
                 return compt_pop;
-            }
-            
+            } 
             else {
                 Moins_bis();
             }
@@ -86,7 +87,6 @@ function ValiderChoix() {
                 compt_pop = 1;
                 return compt_pop;
             }
-
             else {
                 Plus_bis();
             }
