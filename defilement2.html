@@ -12,6 +12,8 @@
             }
             p {
                 font-weight:900;
+                font-size: 1.5rem;
+                align-self: center;
             }
             
             article {
@@ -59,6 +61,12 @@
                 animation: mouvement 3s linear;
             }
 
+            div#clicker {
+                height:100px;
+                position:absolute;
+                left:50%
+            }
+
             @keyframes mouvement {
                     from {
                         margin-left: 0%;
@@ -73,39 +81,48 @@
     </head>
     <body>
         <h1></h1>
-        <!-- Mes boutons de difficultés -->
+        <!-- Boutons de difficultés -->
         <button onclick="SetDiff('facile')">Difficulté 1 : Facile</button>
         <button onclick="SetDiff('moyen')">Difficulté 2 : Moyen</button>
         <button onclick="SetDiff('hard')">Difficulté 3 : Hard</button>
         <button onclick="SetDiff('impossible')">Difficulté 4 : Impossible</button>
+        <!-- Lancer le jeu -->
         <button onclick="Startgame()" id="launch">Lancer le jeu</button>
         <article>
             <section>
-
             </section>
         </article>
+        
+        <!-- Le clicker -->
+        <div id="clicker">
+            <button onclick="reset()">Remettre à zéro</button>
+            <button onclick="clique()">Cliquer</button>
+            <p>Clique : 0</p>
+        </div>
 
         <script>
             var NbBody = 50;
             var monLaunch = document.getElementById("launch");
+            var compteur = 0;
+
 
             function SetDiff(Diff) { 
                 monLaunch.className = ""
                 monLaunch.classList.add(Diff)
-
             }
 
             function Startgame() {
                 var maDiff = document.getElementById("launch").className
                 console.log(maDiff)
+
                 switch ( maDiff ) {
                     case "facile" :
                         console.log("vous êtes en facile");
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! FACILE"
-                        for (var index=0 ; index < NbBody ; index+=1.25 ) {
-                            console.dir("index")
-                            document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + index + "s'<p>o _ o</p></div>"
+                        for (var index=0 ; index < NbBody ; index+=1) {
+                            let speed = index*1.25
+                            document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + speed + "s'<p>o _ o</p></div>"
                         }
                         break;
 
@@ -114,8 +131,8 @@
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! MOYEN"
                         for (var index=0 ; index < NbBody ; index+=1 ) {
-                            console.dir("index")
-                            document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + index + "s'<p>O _ O</p></div>"
+                            let speed = index*1
+                            document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + speed + "s'<p>O _ O</p></div>"
                         }
                         break;
 
@@ -123,9 +140,9 @@
                         console.log("vous êtes en hard");
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! HARD"
-                        for (var index=0 ; index < NbBody ; index+=0.75 ) {
-                            console.dir("index")
-                            document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + index + "s'<p>* _ *</p></div>"
+                        for (var index=0 ; index < NbBody ; index+=1 ) {
+                            let speed = index*0.75
+                            document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + speed + "s'<p>* _ *</p></div>"
                         }
                         break;
 
@@ -133,14 +150,23 @@
                         console.log("vous êtes en impossible");
                         document.querySelector("h1").innerHTML = "GO ! IMPOSSIBLE"
                         document.querySelector("section").innerHTML = ""
-                        for (var index=0 ; index < NbBody ; index+=0.5 ) {
-                            console.dir("index")
-                            document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + index + "s'<p>* o *</p></div>"
+                        for (var index=0 ; index < NbBody ; index+=1 ) {
+                            let speed = index*0.5
+                            document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + speed + "s'<p>* o *</p></div>"
                         }
                         break
                 }
             }
 
+            function clique() {
+                compteur = compteur + 1;
+                document.querySelector("p").innerHTML = "<p>Cliques : " + compteur;
+            }
+
+            function reset() {
+                compteur = 0;
+                document.querySelector("p").innerHTML = "<p>Clique : " + compteur;
+            }
         </script>
     </body>
 </html>
