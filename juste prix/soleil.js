@@ -12,35 +12,36 @@ var score2 = 0;
 // ---------------------------------------------------------------
 var compt_pop = 0;
 
-var contenu = document.querySelector("#contenu");
 var input = document.querySelector("#input");
-
 
 var plus = document.createElement("div");
 plus.innerHTML += "<p class='pop_up premier'>C'est plus</p>";
-console.dir(plus);
 
 var moins = document.createElement("div");
 moins.innerHTML += "<p class='pop_up premier'>C'est moins</p>";
 
-function Plus() {
+
+function Plus(contenu) {
+    contenu = document.querySelector("#contenu");
     contenu.appendChild(plus);
 }
 
-function Plus_bis() {
+function Plus_bis(contenu) {
     var plus_bis= plus;
     plus_bis.classList.add("pop_up_bis");
     contenu.insertBefore(".premier", ".pop_up-bis");
+    plus_bis.classList.add("premier");
 }
 
-function Moins() {
+function Moins(contenu) {
     contenu.appendChild(moins);
 }
 
-function Moins_bis() {
+function Moins_bis(contenu) {
     var moins_bis= moins;
     moins_bis.classList.add("pop_up_bis");
     contenu.insertBefore(".premier", ".pop_up-bis");
+    moins_bis.classList.add("premier");
 }
 
 
@@ -73,22 +74,22 @@ function ValiderChoix() {
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
             if (compt_pop == 0) {
-                Moins();
+                Moins(contenu);
                 compt_pop = 1;
                 return compt_pop;
             } 
             else {
-                Moins_bis();
+                Moins_bis(contenu);
             }
         }
         else if (RecupChiffre < ChiffreAleatoire) {
             if (compt_pop == 0) {
-                Plus();
+                Plus(contenu);
                 compt_pop = 1;
                 return compt_pop;
             }
             else {
-                Plus_bis();
+                Plus_bis(contenu);
             }
 // -----------------------------------------------------------------------------
 
