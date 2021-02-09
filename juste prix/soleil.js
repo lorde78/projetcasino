@@ -11,38 +11,17 @@ var score2 = 0;
 // Partie méli
 // ---------------------------------------------------------------
 
-function Plus(contenu, p, compteur) {
-    compteur = 0;
+function Plus(bulle) {
+    bulle = document.querySelector("#bulle");
     var plus = document.createElement("div");
     plus.innerHTML += "<p class='pop_up'>C'est plus</p>";
-    contenu = document.querySelector("#contenu");
-    p = document.querySelector("p.premier");
-    if (compteur == 0) {
-        contenu.appendChild(plus);
-        plus.classList.add("premier");
-        compteur = 1;
-        return compteur;
-    } else {
-        contenu.insertBefore(plus, p);
-        plus.classList.add("premier");
-    }
-
+    bulle.insertBefore(plus, bulle.firstChild);
 }
 
-
-function Moins(contenu, p, compteur) {
+function Moins(bulle) {
     var moins = document.createElement("div");
     moins.innerHTML += "<p class='pop_up'>C'est moins</p>";
-    if (compteur == 0) {
-        contenu.appendChild(moins);
-        moins.classListe.add("premier");
-        compteur = 1
-        return compteur;
-    } else {
-        contenu.insertBefore(moins, p);
-        moins.classList.add("premier");
-    }
-
+    bulle.insertBefore(moins, bulle.firstChild);
 }
 
 // --------------------------------------------------------------
