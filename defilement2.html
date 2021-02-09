@@ -154,10 +154,10 @@
                     case "facile" :
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! FACILE"
-                        ecart = 0.7625
+                        ecart = 1.22
                         for (var index=0 ; index < NbBody ; index+=1) {
                             let accel = 1-(index*0.01)
-                            let speed = index*1.25
+                            let speed = index*2
                             if (accel >= 0.8) {
                                 velocity = speed*accel
                                 console.log(velocity, "velocity","if")
@@ -166,7 +166,6 @@
                                 velocity += ecart
                                 console.log(velocity, "velocity","else")
                                 document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
-
                             }
 
                         }
@@ -176,9 +175,19 @@
                         console.log("vous êtes en moyen");
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! MOYEN"
+                        ecart = 1.0675
                         for (var index=0 ; index < NbBody ; index+=1 ) {
-                            let speed = index*1
-                            document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + speed + "s'<p>O _ O</p></div>"
+                            let accel = 1-(index*0.01)
+                            let speed = index*1.75
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
                         }
                         break;
 
@@ -186,9 +195,19 @@
                         console.log("vous êtes en hard");
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! HARD"
+                        ecart = 0.7625
                         for (var index=0 ; index < NbBody ; index+=1 ) {
-                            let speed = index*0.75
-                            document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + speed + "s'<p>* _ *</p></div>"
+                            let accel = 1-(index*0.01)
+                            let speed = index*1.25
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
                         }
                         break;
 
@@ -196,9 +215,19 @@
                         console.log("vous êtes en impossible");
                         document.querySelector("h1").innerHTML = "GO ! IMPOSSIBLE"
                         document.querySelector("section").innerHTML = ""
+                        ecart = 0.4575
                         for (var index=0 ; index < NbBody ; index+=1 ) {
-                            let speed = index*0.5
-                            document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + speed + "s'<p>* o *</p></div>"
+                            let accel = 1-(index*0.01)
+                            let speed = index*0.75
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
                         }
                         break
                 }
