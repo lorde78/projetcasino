@@ -69,8 +69,8 @@ function CestMoins(){
     alert("c moins")
     clicks2 += 1;
     console.log(clicks2)
-    if (clicks == 12) {
-        document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non j'ai perdu... "
+    if (clicks2 == 12) {
+        document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non toi perdu... "
     } else {
     max = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
@@ -84,7 +84,7 @@ function CestPlus(){
     alert("C'est plus")
     clicks2 += 1;
     console.log(clicks2)
-    if (clicks == 12) {
+    if (clicks2 == 6) {
         document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non j'ai perdu... "
     } else {
     min = ChiffreAleatoire2
@@ -98,9 +98,9 @@ function CestPlus(){
 
 function CestCa(){
     if (ValeurEnregistre == ChiffreAleatoire2){
-        alert("C'est coool")
+        alert("La massine a gagné")
     } else{
-        aler("Hmmm, pas si sûr")
+        alert("Hmmm, pas si sûr")
     }
     
 }
