@@ -1,6 +1,3 @@
-
-
-
 var max  = 100;
 var min = 0;
 var clicks = 0;
