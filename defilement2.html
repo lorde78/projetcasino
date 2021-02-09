@@ -130,8 +130,11 @@
 
                     //Determine le nombre de carré
             function getRandomIntInclusive(min, max) {
+<<<<<<< Updated upstream
                 min = 40;
                 max = 50;
+=======
+>>>>>>> Stashed changes
                 return Math.floor(Math.random() * (max - min + 1)) + min;
                 console.log(max)
                 console.log(min)
@@ -154,12 +157,32 @@
 
                 switch ( maDiff ) {
                     case "facile" :
+<<<<<<< Updated upstream
                         console.log("vous êtes en facile");
                         document.querySelector("section").innerHTML = ""
                         document.querySelector("h1").innerHTML = "GO ! FACILE"
                         for (var index=0 ; index < NbBody ; index+=1) {
                             let speed = index*1.25
                             document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + speed + "s'<p>o _ o</p></div>"
+=======
+                        document.querySelector("section").innerHTML = ""
+                        document.querySelector("h1").innerHTML = "GO ! FACILE"
+                        ecart = 0.7625
+                        for (var index=0 ; index < NbBody ; index+=1) {
+                            let accel = 1-(index*0.01)
+                            let speed = index*1.25
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+
+                            }
+
+>>>>>>> Stashed changes
                         }
                         break;
 
