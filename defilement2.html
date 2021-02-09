@@ -65,6 +65,18 @@
                 animation: mouvement 3s linear;
             }
 
+            div.limit-droite{
+                border-right:solid 3px red;
+                position:absolute;
+                left:1000px;
+            }
+
+            div.limit-gauche{
+                border-right:solid 3px red;
+                position:absolute;
+                left:900px;
+            }
+
             aside{
                 display:flex;
                 width:100%;
@@ -104,6 +116,8 @@
         <!-- Lancer le jeu -->
         <button onclick="Startgame()" id="launch">Lancer le jeu</button>
         <article>
+            <div class='limit-gauche'></div>
+            <div class='limit-droite'></div>
             <section>
             </section>
             
@@ -148,8 +162,10 @@
                 if (mouvement) {
                     window.requestAnimationFrame(getPosition);
                   }
-                }
+            }
                 window.requestAnimationFrame(getPosition);
+
+
 
                     // Lancer le jeu
             function Startgame() {
@@ -245,13 +261,19 @@
             // Le clicker
 
             function clique() {
-                compteur = compteur + 1;
-                document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                var divElement = document.querySelectorAll("div");
+                for(let bite=0; bite < divElement.length ; bite ++){
+                    if (divElement[bite].getBoundingClientRect().left < 1000 && divElement[bite].getBoundingClientRect().left > 900){
+                        compteur = compteur + 1;
+                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                    }
+                }
             }
 
             function reset() {
                 compteur = 0;
                 document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;
+                    
             }
 
 
