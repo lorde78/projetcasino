@@ -141,6 +141,15 @@
                 monLaunch.classList.add(Diff)
             }
 
+            function getPosition(mouvement) {
+                var divElement = document.querySelector("div");
+                var results = divElement.getBoundingClientRect();
+                console.log(results.top, results.left);
+                if (mouvement) {
+                    window.requestAnimationFrame(getPosition);
+                  }
+                }
+                window.requestAnimationFrame(getPosition);
 
                     // Lancer le jeu
             function Startgame() {
