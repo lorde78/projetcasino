@@ -1,6 +1,5 @@
 
-var ChiffreAleatoire = Math.floor(Math.random()*100);
-    console.log(ChiffreAleatoire);
+
 
 var max  = 100;
 var min = 0;
@@ -9,6 +8,22 @@ var score1 = 0;
 var clicks2 = 0;
 var ValeurEnregistre = 0 ;
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
+
+
+function Niveau1(){
+    var max  = 100;
+    var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
+    console.log(ChiffreAleatoire);
+    document.getElementById("Niveau").innerHTML= "none";
+}
+function Niveau2(){
+    var max  = 1000;
+    var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
+    console.log(ChiffreAleatoire);
+    document.getElementById("Niveau").innerHTML= "none";
+}
+
+
 
 
 function ValiderChoix() {
@@ -60,6 +75,8 @@ function EnregistrerChoix(){
         document.getElementById("buttonPlus").style.display = "block";
         document.getElementById("buttonMoins").style.display = "block";
         document.getElementById("buttonCestCa").style.display = "block";
+        document.getElementById("AfficherChiffreEnregistre").style.display = "block";
+        document.getElementById("AfficherChiffreEnregistre").innerHTML += ValeurEnregistre;
         document.getElementById("BlocChiffreAleatoire").style.display = "block";
         document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
         console.log(ChiffreAleatoire2)
@@ -90,9 +107,9 @@ function CestPlus(){
     min = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
     document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
-    console.log(ChiffreAleatoire2)
-    console.log(min)
-    console.log(max)
+    //console.log(ChiffreAleatoire2)
+    //console.log(min)
+    //console.log(max)
 }
 } 
 

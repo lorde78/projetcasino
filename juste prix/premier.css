@@ -11,9 +11,10 @@ html{
     height: 600px;
 }
 
+
 #input{
     background-color: pink;
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 2;
     display: flex;
     align-items: center;
@@ -23,7 +24,7 @@ html{
 
 #plus {
     background-color: blue;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -33,7 +34,7 @@ html{
 
 #moins {
     background-color: blue;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -72,10 +73,30 @@ html{
 
 #BlocChiffreAleatoire {
     background-color: blue;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
     display: none;
     text-align: center;
 }
+
+#AfficherChiffreEnregistre {
+    display : none;
+    background-color: grey ;
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+#Niveau {
+    margin-top: 20px;
+    grid-row: 1;
+    grid-column: 2;
+    
+    text-align: center;
+}
+

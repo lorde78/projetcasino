@@ -8,6 +8,12 @@
 </head>
 <body>
     <section id="grid">
+        <!--Choix du niveau -->
+        <section id ="Niveau">
+            <button id="Niveau1" type="button" onclick="Niveau1()"> Niveau 1  </button>
+            <button id="Niveau2" type="button" onclick="Niveau2()"> Niveau 2  </button>
+        </section>
+
         <article id="input"> 
             <!--PARTIE 1 -->
             <label for="ChiffreADeviner"> </label>
@@ -23,18 +29,27 @@
             <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
             <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
             <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
+    
         </article>
+        
 
+        <!-- PARTIE 1-->
+        <!-- Bloc avec message "c'est plus" ou "c'est moins" -->
         <section id="plus">
             <p>C'est plus</p>
         </section>
-
         <section id="moins">
             <p>C'est moins</p>
         </section>
 
+        <!-- PARTIE 2-->
+        <!-- Bloc contenant le chiffre aléatoire  -->
         <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span>
         </span>
+        <!-- Bloc contenant le chiffre enregistre  -->
+        <section id ="AfficherChiffreEnregistre">  Mon chiffre : </section>
+        
+    
 
     </section>
 </body>
