@@ -3,13 +3,13 @@ html{
 }
 
 #contenu{
-    border-radius: 20px;
     margin: 50px;
-    padding : 20px ;
-    display: flex;
+    padding: 20px;
     background-color: black;
-    flex-direction: column;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
     align-items: center;
 }
 
@@ -26,29 +26,18 @@ html{
 }
 
 
-#plus {
+.pop_up {
     background-color: blue;
-    grid-row: 4;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: none;
-    text-align: center;
-}
-
-#moins {
-    background-color: blue;
-    grid-row: 4;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: none;
-    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #button{
-    display : none;
-    
+    display : none;   
 }
 
 #button2 {

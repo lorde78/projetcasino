@@ -1,3 +1,20 @@
+// Partie méli
+// ---------------------------------------------------------------
+
+function Plus(bulle) {
+    bulle = document.querySelector("#bulle");
+    var plus = document.createElement("div");
+    plus.innerHTML += "<p class='pop_up'>C'est plus</p>";
+    bulle.insertBefore(plus, bulle.firstChild);
+}
+
+function Moins(bulle) {
+    var moins = document.createElement("div");
+    moins.innerHTML += "<p class='pop_up'>C'est moins</p>";
+    bulle.insertBefore(moins, bulle.firstChild);
+}
+
+// --------------------------------------------------------------
 var max  = 100;
 var min = 0;
 var clicks = 0;
@@ -54,13 +71,15 @@ function Niveau3(){
     document.getElementById("Niveau").innerHTML= "none";
 }
 
+// Partie Cherine
+// ---------------------------------------------------------------
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
     clicks += 1; 
     document.getElementById("recup").innerHTML = clicks;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " + clicks ; 
-        
+
     if (clicks == 12){
         if(RecupChiffre == ChiffreAleatoire) {
             //alert("Cool");
@@ -74,18 +93,17 @@ function ValiderChoix() {
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
-            document.getElementById("plus").style.display = "none";
-            document.getElementById("moins").style.display = "block";
+            Moins(contenu);
         } else {
             if (RecupChiffre < ChiffreAleatoire){
-                document.getElementById("moins").style.display = "none";
-                document.getElementById("plus").style.display = "block";
+                Plus(contenu);
             }else {
                 if(RecupChiffre == ChiffreAleatoire) {
                     //alert("Cool");
                     score1 = clicks
                     return EnregistrerChoix()
                 }}}}}
+
     
 function EnregistrerChoix(){
     console.log(score1)
@@ -149,5 +167,4 @@ function CestCa(){
     } else{
         alert("Hmmm, pas si sûr")
     }
-    
 }
