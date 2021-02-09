@@ -7,30 +7,63 @@ var clicks = 0;
 var score1 = 0;
 var clicks2 = 0;
 var ValeurEnregistre = 0 ;
+var ChiffreAleatoire = 0 ; 
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
 
 
+function TexteNiveau1SourisOver(){
+    document.getElementById("TexteNiveau1").style.display = "block";
+}
+function TexteNiveau1SourisLeave() {
+    document.getElementById("TexteNiveau1").style.display = "none";
+}
+
+function TexteNiveau2SourisOver(){
+    document.getElementById("TexteNiveau2").style.display = "block";
+}
+function TexteNiveau2SourisLeave() {
+    document.getElementById("TexteNiveau2").style.display = "none";
+}
+
+function TexteNiveau3SourisOver(){
+    document.getElementById("TexteNiveau3").style.display = "block";
+}
+function TexteNiveau3SourisLeave() {
+    document.getElementById("TexteNiveau3").style.display = "none";
+}
+
 function Niveau1(){
     var max  = 100;
-    var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
+    ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
-    document.getElementById("Niveau").innerHTML= "none";
+    document.getElementById("Niveau").style.display= "none";
+    document.getElementById("TexteNiveau1").style.display = "none";
+    document.getElementById("ScoreMoi").style.display = "block" ;
+    document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
+    document.getElementById("recup").style.display = "block"
+    document.getElementById("button").style.display = "block"
 }
+
 function Niveau2(){
     var max  = 1000;
+    ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
+    console.log(ChiffreAleatoire);
+    document.getElementById("Niveau").innerHTML= "none";
+}
+function Niveau3(){
+    var max  = 10000;
     var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").innerHTML= "none";
 }
-
-
-
 
 function ValiderChoix() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
-    clicks += 1;
+    clicks += 1; 
     document.getElementById("recup").innerHTML = clicks;
+    document.getElementById("ScoreMoi").innerHTML = "Mon score : " + clicks ; 
+        
     if (clicks == 12){
         if(RecupChiffre == ChiffreAleatoire) {
             //alert("Cool");
