@@ -8,15 +8,46 @@
 </head>
 <body>
     <section id="contenu">
-        <article id="input">
+        <section id="ScoreMoi">Mon score : </section>
+        <article id="input"> 
+            <!--Choix du niveau -->
+            <section id ="Niveau">
+                <button id="Niveau1" type="button" onclick="Niveau1()" onmouseover="TexteNiveau1SourisOver()" onmouseleave="TexteNiveau1SourisLeave()"> Niveau 1  </button>
+                <button id="Niveau2" type="button" onclick="Niveau2()" onmouseover="TexteNiveau2SourisOver()" onmouseleave="TexteNiveau2SourisLeave()"> Niveau 2  </button>
+                <button id="Niveau3" type="button" onclick="Niveau3()" onmouseover="TexteNiveau3SourisOver()" onmouseleave="TexteNiveau3SourisLeave()"> Niveau 3  </button>
+            </section>
+            
+            <!--PARTIE 1 -->
             <label for="ChiffreADeviner"> </label>
             <input type="tel" id="recup" name="ChiffreADeviner" placeholder="Devinez le chiffre " >
-            <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
+            <button id="button" type="button"  onclick="ValiderChoix();"> Valider </button>
 
-            <button id="button" type="button" onclick="ValiderChoix();"> Valider </button>
-            <button id="button2" type="button" onclick="ValiderChoix();"> Valider2 </button>
+            <!-- PARTIE 2-->
+                <!--PHASE 1 : Entrer un chiffre -->
+            <label for"PlacerChiffre"></label>
+            <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
+            <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
+                <!-- PHASE 2 : Dire si c'est plus ou moins -->
+            <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
+            <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
+            <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
         </article>
+                <!--Plus et moins-->
         <section id=bulle></section>
+        
+        <!-- Souris over les boutons de niveau  -->
+        <section id="SourisOverLesNiveaux">
+            <section id="TexteNiveau1"><p>Tu devras trouver un chiffre entre 1 et 100 </p></section>
+            <section id="TexteNiveau2"><p>Tu devras trouver un chiffre entre 1 et 1000 </p></section>
+            <section id="TexteNiveau3"><p>Tu devras trouver un chiffre entre 1 et 10 000 </p></section>
+            </section>
+
+        <!-- PARTIE 2-->
+        <!-- Bloc contenant le chiffre aléatoire  -->
+        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span>
+        </span>
+        <!-- Bloc contenant le chiffre enregistre  -->
+        <section id ="AfficherChiffreEnregistre">  Mon chiffre : </section>
     </section>
     
 </body>
