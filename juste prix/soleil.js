@@ -1,11 +1,11 @@
 // Partie méli
 // ---------------------------------------------------------------
 // Fonction de bulles plus et moins
-function appear(nb) {
+function appear(nb, RecupChiffre) {
     bulle = document.querySelector("#bulle");
     var apparition = document.createElement("p");
     apparition.classList.add("pop_up");
-    apparition.innerHTML = "C'est " + nb;
+    apparition.innerHTML = RecupChiffre + " C'est " + nb;
     
     bulle.insertBefore(apparition, bulle.firstChild);
 }
@@ -120,10 +120,10 @@ function Partie1() {
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
-            appear("moins");
+            appear("moins", RecupChiffre);
         } else {
             if (RecupChiffre < ChiffreAleatoire){
-                appear("plus");
+                appear("plus", RecupChiffre);
             }else {
                 if(RecupChiffre == ChiffreAleatoire) {
                     //alert("Cool");
