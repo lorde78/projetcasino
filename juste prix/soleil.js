@@ -1,17 +1,13 @@
 // Partie méli
 // ---------------------------------------------------------------
 // Fonction de bulles plus et moins
-function Plus(bulle) {
+function appear(nb) {
     bulle = document.querySelector("#bulle");
-    var plus = document.createElement("div");
-    plus.innerHTML += "<p class='pop_up'>C'est plus</p>";
-    bulle.insertBefore(plus, bulle.firstChild);
-}
-
-function Moins(bulle) {
-    var moins = document.createElement("div");
-    moins.innerHTML += "<p class='pop_up'>C'est moins</p>";
-    bulle.insertBefore(moins, bulle.firstChild);
+    var apparition = document.createElement("p");
+    apparition.classList.add("pop_up");
+    apparition.innerHTML = "C'est " + nb;
+    
+    bulle.insertBefore(apparition, bulle.firstChild);
 }
 
 // --------------------------------------------------------------
@@ -125,10 +121,10 @@ function ValiderChoix() {
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
-            Moins(contenu);
+            appear("moins");
         } else {
             if (RecupChiffre < ChiffreAleatoire){
-                Plus(contenu);
+                appear("plus");
             }else {
                 if(RecupChiffre == ChiffreAleatoire) {
                     //alert("Cool");
