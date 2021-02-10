@@ -8,7 +8,10 @@
 </head>
 <body>
     <section id="contenu">
-        <section id="ScoreMoi">Mon score : </section>
+        <section id ="Scores">
+            <section id="ScoreMoi"></section>
+            <section id="ScoreOrdi"> </section>
+        </section>
         <article id="input"> 
             <!--Choix du niveau -->
             <section id ="Niveau">
@@ -18,20 +21,24 @@
             </section>
             
             <!--PARTIE 1 -->
-            <label for="ChiffreADeviner"> </label>
-            <input type="tel" id="recup" name="ChiffreADeviner" placeholder="Devinez le chiffre " >
-            <button id="button" type="button"  onclick="ValiderChoix();"> Valider </button>
-
+            <section id ="BoutonsPartie1">
+                <input type="tel" id="recup" name="ChiffreADeviner" placeholder="Devinez le chiffre " >
+                <button id="button" type="button"  onclick="ValiderChoix();"> Valider </button>
+            </section>
             <!-- PARTIE 2-->
                 <!--PHASE 1 : Entrer un chiffre -->
-            <label for"PlacerChiffre"></label>
-            <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
-            <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
+            <!--<section id ="BoutonsPartie2-">
+                <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
+                <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
+            </section> -->
                 <!-- PHASE 2 : Dire si c'est plus ou moins -->
-            <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
-            <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
-            <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
-        </article>
+            <section id ="BoutonsPartie2-2">
+                <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
+                <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
+                <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
+            </section>
+            <section id ="AfficherConsigne">  </section>
+            </article>
                 <!--Plus et moins-->
         <section id=bulle></section>
         
@@ -48,7 +55,6 @@
         </span>
         <!-- Bloc contenant le chiffre enregistre  -->
         <section id ="AfficherChiffreEnregistre">  Mon chiffre : </section>
-    </section>
     
 </body>
 </html>

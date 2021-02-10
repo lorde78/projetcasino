@@ -19,8 +19,11 @@ var max  = 100;
 var min = 0;
 var clicks = 0;
 var score1 = 0;
+var score2 = 0;
 var clicks2 = 0;
-var ValeurEnregistre = 0 ;
+var ClickMax = 0;
+
+//var ValeurEnregistre = 0 ;
 var ChiffreAleatoire = 0 ; 
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
 
@@ -47,28 +50,43 @@ function TexteNiveau3SourisLeave() {
 }
 
 function Niveau1(){
-    var max  = 100;
+    max  = 100;
+    ClickMax = 7 ;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("TexteNiveau1").style.display = "none";
-    document.getElementById("ScoreMoi").style.display = "block" ;
+    document.getElementById("Scores").style.display = "block" ;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
-    document.getElementById("recup").style.display = "block"
-    document.getElementById("button").style.display = "block"
+    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
+    document.getElementById("BoutonsPartie1").style.display = "block";
+    
+    
 }
 
 function Niveau2(){
-    var max  = 1000;
+    max  = 1000;
+    ClickMax = 15 ;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
-    document.getElementById("Niveau").innerHTML= "none";
+    document.getElementById("Niveau").style.display= "none";
+    document.getElementById("TexteNiveau1").style.display = "none";
+    document.getElementById("Scores").style.display = "block" ;
+    document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
+    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
+    document.getElementById("BoutonsPartie1").style.display = "block"
 }
 function Niveau3(){
-    var max  = 10000;
+    max  = 10000;
+    ClickMax = 21 ;
     var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
-    document.getElementById("Niveau").innerHTML= "none";
+    document.getElementById("Niveau").style.display= "none";
+    document.getElementById("TexteNiveau1").style.display = "none";
+    document.getElementById("Scores").style.display = "block" ;
+    document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
+    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
+    document.getElementById("BoutonsPartie1").style.display = "block"
 }
 
 // Partie Cherine
@@ -80,7 +98,7 @@ function ValiderChoix() {
     document.getElementById("recup").innerHTML = clicks;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " + clicks ; 
 
-    if (clicks == 12){
+    if (clicks == ClickMax){
         if(RecupChiffre == ChiffreAleatoire) {
             //alert("Cool");
             score1 = clicks
@@ -106,51 +124,47 @@ function ValiderChoix() {
 
     
 function EnregistrerChoix(){
-    console.log(score1)
-    document.getElementById("recup2").style.display = "block";
-    document.getElementById("recup").style.display = "none";
-    document.getElementById("button2").style.display = "block";
-    document.getElementById("button").style.display = "none" ;
-    document.getElementById("plus").style.display = "none";
-    document.getElementById("moins").style.display = "none";
+    // document.getElementById("BoutonsPartie2-1").style.display = "block";
+    document.getElementById("BoutonsPartie1").style.display = "none";
+    document.getElementById("bulle").style.display = "none" ;
 
-    ValeurEnregistre = document.getElementById("recup2").value
-    console.log(ValeurEnregistre)
+    //ValeurEnregistre = document.getElementById("recup2").value
+    //console.log(ValeurEnregistre)
 
-    if (ValeurEnregistre>0){
-        document.getElementById("button2").style.display = "none";
-        document.getElementById("recup2").style.display = "none";
-        document.getElementById("buttonPlus").style.display = "block";
-        document.getElementById("buttonMoins").style.display = "block";
-        document.getElementById("buttonCestCa").style.display = "block";
-        document.getElementById("AfficherChiffreEnregistre").style.display = "block";
-        document.getElementById("AfficherChiffreEnregistre").innerHTML += ValeurEnregistre;
+    //if (ValeurEnregistre>0){
+        //document.getElementById("BoutonsPartie2-1").style.display = "none";
+        document.getElementById("BoutonsPartie2-2").style.display = "block";
+
+        document.getElementById("AfficherConsigne").style.display = "block";
+        document.getElementById("AfficherConsigne").innerHTML = "Fais deviner un chiffre compris entre " + min+ " et " + max;
+
         document.getElementById("BlocChiffreAleatoire").style.display = "block";
         document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
+
         console.log(ChiffreAleatoire2)
-    }}
+    }//}
     
 function CestMoins(){
-    alert("c moins")
     clicks2 += 1;
-    console.log(clicks2)
-    if (clicks2 == 12) {
+    document.getElementById("buttonMoins").value = clicks2;
+    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ; 
+
+    if (clicks2 == ClickMax) {
         document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non toi perdu... "
     } else {
     max = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
     document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
-    console.log(min)
-    console.log(max)
     }
     }
 
 function CestPlus(){
-    alert("C'est plus")
     clicks2 += 1;
-    console.log(clicks2)
-    if (clicks2 == 6) {
-        document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non j'ai perdu... "
+    console.log(ClickMax)
+    document.getElementById("buttonMoins").value = clicks2;
+    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ;
+    if (clicks2 == ClickMax) {
+        document.getElementById("LeChiffreAleatoire2").innerHTML = "La machine a perdu... tu remportes cette partie !! "
     } else {
     min = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
@@ -162,9 +176,8 @@ function CestPlus(){
 } 
 
 function CestCa(){
-    if (ValeurEnregistre == ChiffreAleatoire2){
-        alert("La massine a gagné")
-    } else{
-        alert("Hmmm, pas si sûr")
-    }
+    alert("La massine a gagné")
+    //} else{
+        //alert("Hmmm, pas si sûr")
+    //}
 }
