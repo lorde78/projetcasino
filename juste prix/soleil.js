@@ -1,6 +1,6 @@
 // Partie méli
 // ---------------------------------------------------------------
-
+// Fonction de bulles plus et moins
 function Plus(bulle) {
     bulle = document.querySelector("#bulle");
     var plus = document.createElement("div");
@@ -28,20 +28,24 @@ var ChiffreAleatoire = 0 ;
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
 
 // ---------------------------------------------------------------
-// Fonction de bulles plus et moins
+// Boutons de niveaux au survol de la souris
 
-function Plus(bulle) {
-    bulle = document.querySelector("#bulle");
-    var plus = document.createElement("div");
-    plus.innerHTML += "<p class='pop_up'>C'est plus</p>";
-    bulle.insertBefore(plus, bulle.firstChild);
+function mouse(bin, nb) {
+
+    const survol = document.querySelector("#Survol");
+    const txt_lv= document.createElement("p");
+    txt_lv.id = "txt";
+    txt_lv.innerHTML= "Tu devras trouver un chiffre entre 1 et " + nb;
+    
+    if (bin == 1) {
+        survol.append(txt_lv);
+    }
+    else if (bin == 0) {
+        block = document.querySelector("#txt");
+        block.remove();
+    }
 }
 
-function Moins(bulle) {
-    var moins = document.createElement("div");
-    moins.innerHTML += "<p class='pop_up'>C'est moins</p>";
-    bulle.insertBefore(moins, bulle.firstChild);
-}
 
 // --------------------------------------------------------------
 
