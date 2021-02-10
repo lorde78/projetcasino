@@ -15,9 +15,9 @@
         <article id="input"> 
             <!--Choix du niveau -->
             <section id ="Niveau">
-                <button id="Niveau1" type="button" onclick="Niveau1()" onmouseover="TexteNiveau1SourisOver()" onmouseleave="TexteNiveau1SourisLeave()"> Niveau 1  </button>
-                <button id="Niveau2" type="button" onclick="Niveau2()" onmouseover="TexteNiveau2SourisOver()" onmouseleave="TexteNiveau2SourisLeave()"> Niveau 2  </button>
-                <button id="Niveau3" type="button" onclick="Niveau3()" onmouseover="TexteNiveau3SourisOver()" onmouseleave="TexteNiveau3SourisLeave()"> Niveau 3  </button>
+                <button type="button" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
+                <button type="button" onclick="Niveau2()" onmouseover="mouse(1, 1000)" onmouseleave="mouse(0, 1000)"> Niveau 2 </button>
+                <button type="button" onclick="Niveau3()" onmouseover="mouse(1, 10000)" onmouseleave="mouse(0, 10000)"> Niveau 3 </button>
             </section>
             
             <!--PARTIE 1 -->
@@ -43,11 +43,7 @@
         <section id=bulle></section>
         
         <!-- Souris over les boutons de niveau  -->
-        <section id="SourisOverLesNiveaux">
-            <section id="TexteNiveau1"><p>Tu devras trouver un chiffre entre 1 et 100 </p></section>
-            <section id="TexteNiveau2"><p>Tu devras trouver un chiffre entre 1 et 1000 </p></section>
-            <section id="TexteNiveau3"><p>Tu devras trouver un chiffre entre 1 et 10 000 </p></section>
-            </section>
+        <section id="Survol"></section>
 
         <!-- PARTIE 2-->
         <!-- Bloc contenant le chiffre aléatoire  -->

@@ -27,27 +27,23 @@ var ClickMax = 0;
 var ChiffreAleatoire = 0 ; 
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
 
+// ---------------------------------------------------------------
+// Fonction de bulles plus et moins
 
-function TexteNiveau1SourisOver(){
-    document.getElementById("TexteNiveau1").style.display = "block";
-}
-function TexteNiveau1SourisLeave() {
-    document.getElementById("TexteNiveau1").style.display = "none";
-}
-
-function TexteNiveau2SourisOver(){
-    document.getElementById("TexteNiveau2").style.display = "block";
-}
-function TexteNiveau2SourisLeave() {
-    document.getElementById("TexteNiveau2").style.display = "none";
+function Plus(bulle) {
+    bulle = document.querySelector("#bulle");
+    var plus = document.createElement("div");
+    plus.innerHTML += "<p class='pop_up'>C'est plus</p>";
+    bulle.insertBefore(plus, bulle.firstChild);
 }
 
-function TexteNiveau3SourisOver(){
-    document.getElementById("TexteNiveau3").style.display = "block";
+function Moins(bulle) {
+    var moins = document.createElement("div");
+    moins.innerHTML += "<p class='pop_up'>C'est moins</p>";
+    bulle.insertBefore(moins, bulle.firstChild);
 }
-function TexteNiveau3SourisLeave() {
-    document.getElementById("TexteNiveau3").style.display = "none";
-}
+
+// --------------------------------------------------------------
 
 function Niveau1(){
     max  = 100;
