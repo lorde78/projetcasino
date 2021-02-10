@@ -9,14 +9,21 @@
 <body>
     <section id="contenu">
          <!-- Scores + Compteurs -->
+            <section id="LesDonnes">
+                <section id="MonCompteur"> </section>
+                <section id="SonScore"></section>
+                <section id="SonCompteur"></section>
+            </section>
+
+        <article id="input"> 
 
             <section id="MonScore"></section>
-            <section id="MonCompteur"> </section>
-            <section id="SonScore"></section>
-            <section id="SonCompteur"></section>
-       
-        <article id="input"> 
             <section id ="AfficherConsigne">  Choisi un niveau de difficulté </section>
+            
+            <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2();"> Jouer </button></section>
+
+            <!--<section id ="JouerPartie1"> <button id="BoutonJouerPartie1" type="button" onclick="Partie1();"> Jouer </button></section> -->
+                
             <!--Choix du niveau -->
             <section id ="Niveau">
                 <button type="button" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
@@ -29,6 +36,7 @@
                 <input type="tel" id="recup" name="ChiffreADeviner" placeholder="Devinez le chiffre " >
                 <button id="button" type="button"  onclick="Partie1();"> Valider </button>
             </section>
+            <section id ="MessageErreur"></section>
             <!-- PARTIE 2-->
                 <!--PHASE 1 : Entrer un chiffre -->
             <!--<section id ="BoutonsPartie2-">
