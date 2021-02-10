@@ -119,6 +119,7 @@
             <div class='limit-gauche'></div>
             <div class='limit-droite'></div>
             <section>
+
             </section>
             
         </article>
@@ -130,6 +131,9 @@
             <button onclick="clique()">Cliquer</button>
             <p id="cliks">Clique : 0</p>
         </div>
+        <div class="score">
+
+        </div>
     </aside>
 
         <script>
@@ -140,8 +144,8 @@
                     // Carré de jeu
             var NbBody = 0
             var monLaunch = document.getElementById("launch");
-            var compteur = 0;
 
+            
                     //Determine le nombre de carré
             function getRandomIntInclusive(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -186,14 +190,19 @@
                             if (accel >= 0.8) {
                                 velocity = speed*accel
                                 console.log(velocity, "velocity","if")
-                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
                                 console.log(velocity, "velocity","else")
-                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             }
+                            
+                            
 
                         }
+                        const maLast = document.querySelectorAll("div")
+                        console.log(maLast[maLast.length-3])
+                        
                         break;
 
                     case "moyen" :
@@ -207,11 +216,11 @@
                             if (accel >= 0.8) {
                                 velocity = speed*accel
                                 console.log(velocity, "velocity","if")
-                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
                                 console.log(velocity, "velocity","else")
-                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             }
                         }
                         break;
@@ -227,11 +236,11 @@
                             if (accel >= 0.8) {
                                 velocity = speed*accel
                                 console.log(velocity, "velocity","if")
-                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
                                 console.log(velocity, "velocity","else")
-                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             }
                         }
                         break;
@@ -247,15 +256,16 @@
                             if (accel >= 0.8) {
                                 velocity = speed*accel
                                 console.log(velocity, "velocity","if")
-                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
                                 console.log(velocity, "velocity","else")
-                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'><p>o _ o</p></div>"
                             }
                         }
                         break
                 }
+                
             }
 
             // Le clicker
