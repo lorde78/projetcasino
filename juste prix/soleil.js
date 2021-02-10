@@ -9,7 +9,6 @@ function appear(nb) {
     
     bulle.insertBefore(apparition, bulle.firstChild);
 }
-
 // --------------------------------------------------------------
 var max  = 100;
 var min = 0;
@@ -84,7 +83,7 @@ function Niveau3(){
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
-    document.getElementById("MesDonnes").style.display = "block" ;
+  
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Mon compteur : " + ClickMax ;
     //document.getElementById("Scores").style.display = "block" ;
@@ -97,7 +96,7 @@ function Niveau3(){
 
 // Partie Cherine
 // ---------------------------------------------------------------
-function ValiderChoix() {
+function Partie1() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
     clicks += 1; 
@@ -113,11 +112,11 @@ function ValiderChoix() {
             //alert("Cool");
             score1 = clicks
             console.log(score1)
-            return EnregistrerChoix()
+            return Partie2()
         }else {
                 alert("tu as perdu");
                 score1 = clicks
-                return EnregistrerChoix()
+                return Partie2()
             }
     } else {
         if (RecupChiffre > ChiffreAleatoire) {
@@ -129,11 +128,10 @@ function ValiderChoix() {
                 if(RecupChiffre == ChiffreAleatoire) {
                     //alert("Cool");
                     score1 = clicks
-                    return EnregistrerChoix()
+                    return Partie2()
                 }}}}}
 
-    
-function EnregistrerChoix(){
+function Partie2(){
     document.getElementById("BoutonsPartie2-2").style.display = "block";
     document.getElementById("BoutonsPartie1").style.display = "none";
     document.getElementById("bulle").style.display = "none" ;
@@ -149,12 +147,9 @@ function EnregistrerChoix(){
     //if (ValeurEnregistre>0){
         //document.getElementById("BoutonsPartie2-1").style.display = "none";
         document.getElementById("BoutonsPartie2-2").style.display = "block";
-
         document.getElementById("AfficherConsigne").innerHTML = "Fais deviner un chiffre compris entre " + min+ " et " + max;
-
         document.getElementById("BlocChiffreAleatoire").style.display = "block";
         document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2;
-
         console.log(ChiffreAleatoire2)
     }//}
     
