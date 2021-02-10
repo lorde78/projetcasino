@@ -74,16 +74,7 @@ html{
    
 }
 
-#LesDonnes {
-    border-radius: 20px;
-    display: flex;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 50px;
-    padding-left: 20px;
-    display : none;
-}
+
 
 #BoutonsPartie1{
     display: none;
@@ -114,16 +105,46 @@ html{
     
 }
 
+
 #MonCompteur {
     display : none;
+    border-radius: 20px;
+    background-color : #5217F2 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
 }
 #MonScore {
     display : none;
+    border-radius: 20px;
+    text-align: center;
+    background-color : #5217F2 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+
 }
 
 #SonScore {
     display : none;
+    border-radius: 20px;
+    background-color : #5217F2 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
 }
 #SonCompteur {
     display : none;
+    border-radius: 20px;
+    background-color : #5217F2 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
 }

@@ -54,7 +54,7 @@ function Niveau1(){
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
-    document.getElementById("LesDonnes").style.display = "block" ;
+    
     //document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Mon compteur : " + ClickMax ;
@@ -145,7 +145,7 @@ function EnregistrerChoix(){
     document.getElementById("MonScore").style.display = "block";
     document.getElementById("MonScore").innerHTML += "Mon score : "+ score1 ;
     document.getElementById("SonCompteur").style.display = "block";
-    document.getElementById("MonCompteur").innerHTML += "Mon score : "+ ClickMax ;
+    document.getElementById("SonCompteur").innerHTML += "Son compteur  : "+ ClickMax ;
 
     //ValeurEnregistre = document.getElementById("recup2").value
     //console.log(ValeurEnregistre)
@@ -165,7 +165,7 @@ function EnregistrerChoix(){
 function CestMoins(){
     clicks2 += 1;
     document.getElementById("buttonMoins").value = clicks2;
-    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ; 
+    //document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ; 
 
     if (clicks2 == ClickMax) {
         document.getElementById("LeChiffreAleatoire2").innerHTML = "Oh non toi perdu... "
@@ -180,7 +180,7 @@ function CestPlus(){
     clicks2 += 1;
     console.log(ClickMax)
     document.getElementById("buttonMoins").value = clicks2;
-    document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ;
+    //document.getElementById("ScoreOrdi").innerHTML = "Score machine : " + clicks2 ;
     if (clicks2 == ClickMax) {
         document.getElementById("LeChiffreAleatoire2").innerHTML = "La machine a perdu... tu remportes cette partie !! "
     } else {
@@ -195,6 +195,9 @@ function CestPlus(){
 
 function CestCa(){
     alert("La massine a gagné")
+    clicks2 = score2
+    document.getElementById("SonScore").style.display = "block";
+    document.getElementById("SonScore").innerHTML += "Son score : "+ score2 ;
     //} else{
         //alert("Hmmm, pas si sûr")
     //}
