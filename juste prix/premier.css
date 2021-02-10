@@ -23,6 +23,7 @@ html{
     padding-right: 70px;
     padding-left: 70px;
     margin-bottom: 40px;
+    
 }
 
 
@@ -52,6 +53,13 @@ html{
 }
 
 
+#Niveau  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 #Niveau {
     margin-top: 20px;
@@ -64,6 +72,7 @@ html{
     display: none;
     text-align: center;
     margin-bottom: 20px;
+
 }
 
 #Survol p {
@@ -73,7 +82,7 @@ html{
     padding-bottom: 5px;
     padding-right: 50px;
     padding-left: 50px;
-    display : none;
+   
 }
 
 #Scores {
@@ -86,13 +95,9 @@ html{
     display : none;
 }
 
-
 #BoutonsPartie1{
-    margin-top: 20px;
     display: none;
-    text-align: center;
-    margin-bottom: 20px;
-    display: none;
+
 }
 
 /* #BoutonsPartie2-1{

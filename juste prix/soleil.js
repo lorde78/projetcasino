@@ -55,13 +55,10 @@ function Niveau1(){
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
-    document.getElementById("TexteNiveau1").style.display = "none";
     document.getElementById("Scores").style.display = "block" ;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
     document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
     document.getElementById("BoutonsPartie1").style.display = "block";
-    
-    
 }
 
 function Niveau2(){
@@ -70,7 +67,6 @@ function Niveau2(){
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
-    document.getElementById("TexteNiveau1").style.display = "none";
     document.getElementById("Scores").style.display = "block" ;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
     document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
@@ -79,10 +75,9 @@ function Niveau2(){
 function Niveau3(){
     max  = 10000;
     ClickMax = 21 ;
-    var ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
+    ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
-    document.getElementById("TexteNiveau1").style.display = "none";
     document.getElementById("Scores").style.display = "block" ;
     document.getElementById("ScoreMoi").innerHTML = "Mon score : " 
     document.getElementById("ScoreOrdi").innerHTML = "Score machine : " 
@@ -124,7 +119,7 @@ function ValiderChoix() {
 
     
 function EnregistrerChoix(){
-    // document.getElementById("BoutonsPartie2-1").style.display = "block";
+    document.getElementById("BoutonsPartie2-2").style.display = "block";
     document.getElementById("BoutonsPartie1").style.display = "none";
     document.getElementById("bulle").style.display = "none" ;
 
