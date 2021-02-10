@@ -1,11 +1,12 @@
 html{
-    background-color: grey;
+    background-color: black;
 }
 
 #contenu{
     margin: 50px;
     padding: 20px;
-    background-color: black;
+    background-color: grey;
+    background-image:url(1);
     height: 600px;
     display: flex;
     flex-direction: column;
