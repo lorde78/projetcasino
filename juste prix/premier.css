@@ -13,7 +13,6 @@ html{
     align-items: center;
 }
 
-
 #input{
     border-radius: 20px;
     background-color: pink;
@@ -23,7 +22,6 @@ html{
     padding-right: 70px;
     padding-left: 70px;
     margin-bottom: 40px;
-    
 }
 
 
@@ -36,8 +34,6 @@ html{
     padding-left: 25px;
     padding-right: 25px;
 }
-
-
 
 
 #BlocChiffreAleatoire {
@@ -54,19 +50,12 @@ html{
 
 
 #Niveau  {
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-around; 
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-#Niveau {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-}
 #BoutonsPartie2-2 {
     margin-top: 20px;
     display: none;
@@ -85,8 +74,9 @@ html{
    
 }
 
-#Scores {
+#LesDonnes {
     border-radius: 20px;
+    display: flex;
     background-color : #5217F2 ;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -97,6 +87,9 @@ html{
 
 #BoutonsPartie1{
     display: none;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 
 }
 
@@ -110,7 +103,6 @@ html{
 
 #AfficherConsigne {
     border-radius: 10px;
-    display : none;
     background-color: grey ;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -120,4 +112,18 @@ html{
     text-align: center;
     margin-bottom: 10px;
     
+}
+
+#MonCompteur {
+    display : none;
+}
+#MonScore {
+    display : none;
+}
+
+#SonScore {
+    display : none;
+}
+#SonCompteur {
+    display : none;
 }

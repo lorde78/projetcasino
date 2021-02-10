@@ -8,11 +8,16 @@
 </head>
 <body>
     <section id="contenu">
-        <section id ="Scores">
-            <section id="ScoreMoi"></section>
-            <section id="ScoreOrdi"> </section>
+         <!-- Mon score + Mon compteur -->
+         <section id ="LesDonnes">
+            <section id="MonScore"></section>
+            <section id="MonCompteur"> </section>
+            <section id="SonScore"></section>
+            <section id="SonCompteur"></section>
         </section>
+       
         <article id="input"> 
+            <section id ="AfficherConsigne">  Choisi un niveau de difficulté </section>
             <!--Choix du niveau -->
             <section id ="Niveau">
                 <button type="button" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
@@ -38,7 +43,7 @@
                 <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
             </section>
             
-            <section id ="AfficherConsigne">  </section>
+            
             </article>
                 <!--Plus et moins-->
         <section id=bulle></section>
@@ -50,8 +55,5 @@
         <!-- Bloc contenant le chiffre aléatoire  -->
         <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span>
         </span>
-        <!-- Bloc contenant le chiffre enregistre  -->
-        <section id ="AfficherChiffreEnregistre">  Mon chiffre : </section>
-    
 </body>
 </html>
