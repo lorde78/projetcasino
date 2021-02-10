@@ -39,7 +39,7 @@
                 background-color:green;
                 position:absolute;
                 top:10px;
-                left:10px;
+                left:-100px;
                 animation: mouvement 3s linear;
             }
 
@@ -47,21 +47,21 @@
                 background-color:cyan;
                 position:absolute;
                 top:10px;
-                left:10px;
+                left:-100px;
                 animation: mouvement 3s linear;
             }
             div.hard {
                 background-color:orange;
                 position:absolute;
                 top:10px;
-                left:10px;
+                left:-100px;
                 animation: mouvement 3s linear;
             }
             div.impossible {
                 background-color:red;
                 position:absolute;
                 top:10px;
-                left:10px;
+                left:-100px;
                 animation: mouvement 3s linear;
             }
 
@@ -262,18 +262,23 @@
 
             function clique() {
                 var divElement = document.querySelectorAll("div");
+                var condition = false;
                 for(let bite=0; bite < divElement.length ; bite ++){
                     if (divElement[bite].getBoundingClientRect().left < 1000 && divElement[bite].getBoundingClientRect().left > 900){
                         compteur = compteur + 1;
+                        condition = true;
                         document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
                     }
                 }
+                if (! condition){ 
+                        compteur = compteur - 1
+                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                    }
             }
 
             function reset() {
                 compteur = 0;
-                document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;
-                    
+                document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;       
             }
 
 
