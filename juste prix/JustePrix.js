@@ -62,7 +62,7 @@ function Niveau1(){
 function Niveau2(){
     max  = 1000;
     ClickMax = 17 ;
-    ClickMaxNiv = 17 ;
+    ClickMaxNiv = 16 ;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
@@ -75,7 +75,7 @@ function Niveau2(){
 function Niveau3(){
     max  = 10000;
     ClickMax = 20 ;
-    ClickMaxNiv =  20;
+    ClickMaxNiv =  19;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
     console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
