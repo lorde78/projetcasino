@@ -4,45 +4,118 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css%22%3E">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
     <title>Puissance4</title>
     <style>
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(6, 50px);
-            grid-template-rows: repeat(7, 50px);
-            border: solid 1px black;
-            gap: 1px;
-        }
-
-        .container {
-            display: inline-grid;
-            grid-gap: 2px;
-            border: solid 1px black;
-        }
+        
         .choix{
             display:flex;
-            width:300px;
+            width:350px;
             justify-content: space-evenly;
         }
+
+        table{
+            border: 1px solid black;
+        }
+
+        td {
+            width:10px;
+            height:10px;
+            border: 1px solid black;
+            padding:4px 6px;
+          }
+
+          .rouge{
+              background-color:red;
+          }
+
     </style>
 </head>
 
 <body>
     <h1>Puissance4</h1>
-    <div class="container">
-        <div class="grid">
+        <!-- <div class="grid">-->
+            <table class="container">
+                <thead></thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tfoot>
+                <td><button id="button1" onclick="colChoise">col1</button></td>
+                <td><button id="button2">col2</button></td>
+                <td><button id="button3">col3</button></td>
+                <td><button id="button4">col4</button></td>
+                <td><button id="button5">col5</button></td>
+                <td><button id="button6">col6</button></td>
+                <td><button id="button7">col7</button></td>
+            </tfoot>
+        </table>
+    
+    <script>
+        
 
-        </div>
-    </div>
-    <div class="choix">
-    <button>col1</button>
-    <button>col2</button>
-    <button>col3</button>
-    <button>col4</button>
-    <button>col5</button>
-    <button>col6</button>
-    </div>
+
+    </script>
 
 </body>
 
