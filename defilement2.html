@@ -139,7 +139,6 @@
         <script>
 
                     // Compteur
-            var compteur = 0;
 
                     // Carré de jeu
             var NbBody = 0
@@ -191,11 +190,9 @@
                             let speed = index*2
                             if (accel >= 0.8) {
                                 velocity = speed*accel
-                                console.log(velocity, "velocity","if")
                                 document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
-                                console.log(velocity, "velocity","else")
                                 document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             }
                             totalvelocity = velocity
@@ -212,11 +209,9 @@
                             let speed = index*1.75
                             if (accel >= 0.8) {
                                 velocity = speed*accel
-                                console.log(velocity, "velocity","if")
                                 document.querySelector("section").innerHTML += "<div class='moyen carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
-                                console.log(velocity, "velocity","else")
                                 document.querySelector("section").innerHTML += "<div class='moyen carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             }
                             totalvelocity = velocity
@@ -233,11 +228,9 @@
                             let speed = index*1.25
                             if (accel >= 0.8) {
                                 velocity = speed*accel
-                                console.log(velocity, "velocity","if")
                                 document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
-                                console.log(velocity, "velocity","else")
                                 document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             }
                             totalvelocity = velocity
@@ -254,32 +247,26 @@
                             let speed = index*0.75
                             if (accel >= 0.8) {
                                 velocity = speed*accel
-                                console.log(velocity, "velocity","if")
                                 document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             } else {
                                 velocity += ecart
-                                console.log(velocity, "velocity","else")
                                 document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
                             }
                             totalvelocity = velocity
                         }
                         break
                 }
-                var total = NbBody - compteur
-                var total = (total/NbBody)*100
-                console.log(NbBody, "NbBody")
-                console.log(compteur, "compteur")
-                console.log(totalvelocity, "tlv")
-                setTimeout(function(){
-                    document.querySelector(".score").innerHTML = "Votre score est de" + total + "!"
-                }, parseInt(totalvelocity*1000)+3000)
+                // var total = NbBody - compteur
+                // var total = (total/NbBody)*100
+                // setTimeout(function(){
+                //     document.querySelector(".score").innerHTML = "Votre score est de" + total + "!"
+                // }, parseInt(totalvelocity*1000)+3000)
             }
 
             // Le clicker
 
             function clique() {
                 var divElement = document.querySelectorAll("div.carre");
-                console.log(divElement)
                 var condition = false;
                 for(let bite=0; bite < divElement.length ; bite ++){
                     if (divElement[bite].getBoundingClientRect().left < 1000 && divElement[bite].getBoundingClientRect().left > 900){
@@ -292,7 +279,11 @@
                         compteur = compteur - 1
                         document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
                     }
-                    return compteur
+                score = (compteur/NbBody)
+                score = score*100
+                console.log("votre score est de : " + parseInt(score) + "%")
+                document.querySelector(".score").innerHTML = "Votre score est de " + parseInt(score) + "% !"
+
             }
 
             function reset() {
