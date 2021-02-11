@@ -7,112 +7,106 @@
     <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
     <title>Puissance4</title>
     <style>
-        
-        .choix{
-            display:flex;
-            width:350px;
-            justify-content: space-evenly;
+
+        td{
+            background-color:white;
+            height:50px;
+            width:50px;
+            border-radius:55%;
         }
 
         table{
-            border: 1px solid black;
+            background-color: blue;
         }
 
-        td {
-            width:10px;
-            height:10px;
-            border: 1px solid black;
-            padding:4px 6px;
-          }
+        .player1{
+            background-color:red;
+        }
 
-          .rouge{
-              background-color:red;
-          }
+        .player2{
+            background-color:yellow;
+        }
 
     </style>
 </head>
 
 <body>
     <h1>Puissance4</h1>
-        <!-- <div class="grid">-->
-            <table class="container">
-                <thead></thead>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tfoot>
-                <td><button id="button1" onclick="colChoise">col1</button></td>
-                <td><button id="button2">col2</button></td>
-                <td><button id="button3">col3</button></td>
-                <td><button id="button4">col4</button></td>
-                <td><button id="button5">col5</button></td>
-                <td><button id="button6">col6</button></td>
-                <td><button id="button7">col7</button></td>
-            </tfoot>
-        </table>
-    
+
+    <div id="game">
+        <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+
     <script>
-        
+        row = document.querySelectorAll("tr")
+        console.log(row)
+        col = document.querySelectorAll("td")
+        console.log(col)
+
+        function clique(){
+            
+        }
+
+
+        //function onlick td
+        //ajoute class = player1 ou player2
+        //si class = player1 alors player 2 
+
 
 
     </script>
