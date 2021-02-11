@@ -87,18 +87,20 @@ function Partie1() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
     
-    if (RecupChiffre == "") {
+    if (RecupChiffre == false) {
         document.getElementById("MessageErreur").style.display = "block" ;
         document.getElementById("MessageErreur").innerHTML = "Le chiffre doit être compris entre 0 et " + max ;
     }
-    clicks += 1; 
-    document.getElementById("recup").innerHTML = clicks;
-    
-    ClickMax -= 1;
-    document.getElementById("button").value = ClickMax;
-    document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ; 
-    
 
+    if (RecupChiffre == true) {
+        clicks += 1; 
+        document.getElementById("recup").innerHTML = clicks;
+    
+        ClickMax -= 1;
+        document.getElementById("button").value = ClickMax;
+        document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
+    }
+    
     if (clicks == ClickMaxNiv){
         document.getElementById("MessageErreur").style.display = "none" ;
         if (RecupChiffre == ChiffreAleatoire) {
@@ -128,7 +130,7 @@ function Partie1() {
             document.getElementById("MessageErreur").style.display = "block" ;
             document.getElementById("MessageErreur").innerHTML = "Le chiffre doit être compris entre 0 et " + max ;
             
-        } else {
+        } else if (RecupChiffre == true) {
             document.getElementById("MessageErreur").style.display = "none" ;
         appear("plus", RecupChiffre);
     }}
