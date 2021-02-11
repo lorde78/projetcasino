@@ -1,0 +1,21 @@
+#zone {
+	display : grid;
+	border: 2px solid rgb(46, 0, 250);
+	width: 426px;
+    -webkit-user-select: none;
+	gap: 1px;
+   
+}
+
+#background{
+	background-color: rgb(46, 0, 250);
+	width: 429px;
+	height: 368px;
+}
+#reset{
+	margin-bottom: 10px;
+	margin-left: 50px;
+}
+#joueur1{
+	margin-bottom: 10px;
+}
