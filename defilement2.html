@@ -103,6 +103,13 @@
                     }
                 }
 
+                .score{
+                    opacity:0;
+                }
+
+                .win{
+                    opacity:1;
+                }
 
 		</style>
     </head>
@@ -256,11 +263,11 @@
                         }
                         break
                 }
-                // var total = NbBody - compteur
-                // var total = (total/NbBody)*100
-                // setTimeout(function(){
-                //     document.querySelector(".score").innerHTML = "Votre score est de" + total + "!"
-                // }, parseInt(totalvelocity*1000)+3000)
+                setTimeout(function(){
+                    appear = document.querySelector(".score")
+                    appear.className = ""
+                    appear.classList.add(win)
+                }, parseInt(totalvelocity*1000)+3000)
             }
 
             // Le clicker
@@ -282,7 +289,7 @@
                 score = (compteur/NbBody)
                 score = score*100
                 console.log("votre score est de : " + parseInt(score) + "%")
-                document.querySelector(".score").innerHTML = "Votre score est de " + parseInt(score) + "% !"
+                document.querySelector(".score").innerHTML = "<p> Votre score est de " + parseInt(score) + "% !</p>"
 
             }
 
