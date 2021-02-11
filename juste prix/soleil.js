@@ -5,7 +5,7 @@ function appear(nb, RecupChiffre) {
     bulle = document.querySelector("#bulle");
     var apparition = document.createElement("p");
     apparition.classList.add("pop_up");
-    apparition.innerHTML = RecupChiffre + " C'est " + nb;
+    apparition.innerHTML = RecupChiffre + " -  C'est " + nb;
     
     bulle.insertBefore(apparition, bulle.firstChild);
 }
@@ -22,15 +22,17 @@ var compteur = 0;
 //var ValeurEnregistre = 0 ;
 var ChiffreAleatoire = 0 ; 
 var ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min);
+
+
+
 // ---------------------------------------------------------------
 // Boutons de niveaux au survol de la souris
-
 function mouse(bin, nb) {
 
     const survol = document.querySelector("#Survol");
     const txt_lv= document.createElement("p");
     txt_lv.id = "txt";
-    txt_lv.innerHTML= "Trouve un chiffre entre 1 et " + nb;
+    txt_lv.innerHTML= "Trouve un nombre entre 0 et " + nb;
     
     if (bin == 1) {
         survol.append(txt_lv);
@@ -40,8 +42,14 @@ function mouse(bin, nb) {
         block.remove();
     }
 }
-
 // --------------------------------------------------------------
+
+function Partie1_2(){
+    document.getElementById("Niveau").style.display = "block" ;
+    document.getElementById("AfficherConsigne").style.display = "none" ;
+    document.getElementById("AfficherNiveaux").style.display = "none" ;
+
+}
 
 function Niveau1(){
     max  = 100;
@@ -52,10 +60,10 @@ function Niveau1(){
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
-    document.getElementById("BoutonsPartie1").style.display = "block";
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le chiffre compris entre 0 et 100";
+    document.getElementById("BoutonsPartie1_3").style.display = "block";
+    document.getElementById("AfficherConsigne").style.display = "block"
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 100";
 }
-
 function Niveau2(){
     max  = 1000;
     ClickMax = 20 ;
@@ -65,8 +73,9 @@ function Niveau2(){
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
-    document.getElementById("BoutonsPartie1").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le chiffre compris entre 0 et 1000 " ;
+    document.getElementById("BoutonsPartie1_3").style.display = "block"
+    document.getElementById("AfficherConsigne").style.display = "block"
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre compris entre 0 et 1000 " ;
 }
 function Niveau3(){
     max  = 10000;
@@ -77,25 +86,26 @@ function Niveau3(){
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai :  " + ClickMax ;
-    document.getElementById("BoutonsPartie1").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le chiffre compris entre 0 et 10 000 " ;
+    document.getElementById("BoutonsPartie1_3").style.display = "block"
+    document.getElementById("AfficherConsigne").style.display = "block"
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 10 000 " ;
 }
 
 // Partie Cherine
 // ---------------------------------------------------------------
-function Partie1() {
+
+function Partie1_3() {
     var RecupChiffre = document.getElementById("recup").value ;
     console.log(RecupChiffre);
     
     if (RecupChiffre == false) {
         document.getElementById("MessageErreur").style.display = "block" ;
-        document.getElementById("MessageErreur").innerHTML = "Le chiffre doit être compris entre 0 et " + max ;
+        document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
     }
 
     if (RecupChiffre == true) {
         clicks += 1; 
         document.getElementById("recup").innerHTML = clicks;
-    
         ClickMax -= 1;
         document.getElementById("button").value = ClickMax;
         document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
@@ -118,20 +128,32 @@ function Partie1() {
     if (RecupChiffre > ChiffreAleatoire) {
         if (RecupChiffre > max) {
             document.getElementById("MessageErreur").style.display = "block" ;
-            document.getElementById("MessageErreur").innerHTML = "Le chiffre doit être compris entre 0 et " + max ;
+            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
         } else {
+            RecupChiffre == true
+            clicks += 1; 
+            document.getElementById("recup").innerHTML = clicks;
+            ClickMax -= 1;
+            document.getElementById("button").value = ClickMax;
+            document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
             document.getElementById("MessageErreur").style.display = "none" ;
-        appear("moins", RecupChiffre);
+            appear("moins", RecupChiffre);
     }} 
 
     if (RecupChiffre < ChiffreAleatoire){
         if (RecupChiffre < min) {
             document.getElementById("MessageErreur").style.display = "block" ;
-            document.getElementById("MessageErreur").innerHTML = "Le chiffre doit être compris entre 0 et " + max ;
+            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
             
-        } else if (RecupChiffre == true) {
+        } else  {
+            RecupChiffre == true
+            clicks += 1; 
+            document.getElementById("recup").innerHTML = clicks;
+            ClickMax -= 1;
+            document.getElementById("button").value = ClickMax;
+            document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
             document.getElementById("MessageErreur").style.display = "none" ;
-        appear("plus", RecupChiffre);
+            appear("plus", RecupChiffre);
     }}
 
     if(RecupChiffre == ChiffreAleatoire) {
@@ -141,34 +163,34 @@ function Partie1() {
         return Transition()
     }}
     
-
 function Transition() {
     document.getElementById("MessageErreur").style.display = "none" ;
-    document.getElementById("BoutonsPartie1").style.display = "none"
+    document.getElementById("BoutonsPartie1_3").style.display = "none"
     document.getElementById("bulle").style.display = "none" ;
     document.getElementById("MonCompteur").style.display = "none"
-    document.getElementById("AfficherConsigne").innerHTML = " Well done ! <br><br> Tu as réussi en " + score1 + " essai(s). <br> <div> Dans la prochaine partie, il va falloir que tu penses à un chiffre compris entre 0 et " + max + ".</div>  <div> La machine te fera des propositions et tu devras dire si ton chiffre est plus petit ou plus grand. </div> <div> Elle a le même nombre d'essais que toi, le joueur avec le plus petit score l'emporte :) </div> "
-    document.getElementById("MonScore").style.display = "block";
-    document.getElementById("MonScore").innerHTML += "Mon score : "+ score1 ;
+    document.getElementById("AfficherConsigne").innerHTML = " Well done ! <br><br> Tu as réussi en " + score1 + " essai(s). <br><br> <div> Dans la prochaine partie, tu vas devoir penses à un nombre compris entre 0 et " + max + ".</div>  <div> Robot te fera des propositions et tu devras lui dire si ton nombre est plus petit ou plus grand. </div> <div> Il a le même nombre d'essais que toi, le joueur avec le plus petit score l'emporte :) </div> "
+    
     document.getElementById("JouerPartie2").style.display = "block"; 
 }               
 
-
 function Partie2_1() {
-    document.getElementById("AfficherConsigne").innerHTML = "Fais deviner un chiffre compris entre " + min+ " et " + max;
+    
+    document.getElementById("AfficherConsigne").innerHTML = "Pense à un nombre compris entre " + min+ " et " + max ;
     document.getElementById("GenererChiffreAleatoire").style.display = "block";
     document.getElementById("MonScore").style.display = "none";
-    document.getElementById("BoutonsPartie1").style.display = "none";
+    document.getElementById("BoutonsPartie1_3").style.display = "none";
     document.getElementById("JouerPartie2").style.display = "none";
 
 }
 function Partie2_2(){
-    document.getElementById("BoutonsPartie2-2").style.display = "block";
+    document.getElementById("Robot").style.display = "flex"
+    document.getElementById("AfficherConsigne").innerHTML = "Dis à Robot si c'est plus ou moins que ton nombre";
+    document.getElementById("BoutonsPartie2_2").style.display = "block";
     document.getElementById("GenererChiffreAleatoire").style.display = "none";
     document.getElementById("MonCompteur").style.display = "none";
     document.getElementById("SonCompteur").style.display = "block";
     document.getElementById("SonCompteur").innerHTML += "Son compteur  : "+ ClickMax ;
-    document.getElementById("BoutonsPartie2-2").style.display = "block";
+    document.getElementById("BoutonsPartie2_2").style.display = "block";
     document.getElementById("BlocChiffreAleatoire").style.display = "block";
     document.getElementById("LeChiffreAleatoire2").innerHTML += "Est-ce que c'est "+  ChiffreAleatoire2 + "?";
     }
@@ -185,7 +207,7 @@ function CestMoins(){
     } else {
     max = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
-    document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
+    document.getElementById("LeChiffreAleatoire2").innerHTML = "Est-ce que c'est "+  ChiffreAleatoire2 + "?";
     }
     }
 
@@ -201,7 +223,7 @@ function CestPlus(){
     } else {
     min = ChiffreAleatoire2
     ChiffreAleatoire2 = Math.floor(Math.random()*(max - min) + min)
-    document.getElementById("LeChiffreAleatoire2").innerHTML = ChiffreAleatoire2
+    document.getElementById("LeChiffreAleatoire2").innerHTML = "Est-ce que c'est "+  ChiffreAleatoire2 + "?";
 }
 } 
 
@@ -211,18 +233,20 @@ function CestCa(){
 }
 
 function Transition2(){
+    document.getElementById("Robot").style.display = "none"
     document.getElementById("MessageErreur").style.display = "none" ;
-    document.getElementById("BoutonsPartie2-2").style.display = "none"
+    document.getElementById("BoutonsPartie2_2").style.display = "none"
     document.getElementById("SonScore").style.display = "block" ;
-    document.getElementById("MonScore").style.display = "block" ;
     document.getElementById("SonScore").innerHTML += "Son score : "+ score2 ;
+    document.getElementById("MonScore").style.display = "block" ;
+    document.getElementById("MonScore").innerHTML += "Mon score : "+ score1 ;
     document.getElementById("SonCompteur").style.display = "none" ; 
     document.getElementById("BlocChiffreAleatoire").style.display = "none";
-
+    document.getElementById("Rejouer").style.display = "block";
     if (score1 < score2){
-    document.getElementById("AfficherConsigne").innerHTML = " Partie finie !<br><br> Tu as réussi à faire moins essais que la machine. <br> Ce qui fait de toi le vainqueur de cette partie ! </div>  <br><br> Merci d'avoir jouer, à bientôt :) "
+    document.getElementById("AfficherConsigne").innerHTML = " Partie finie !<br><br> Tu as réussi à faire moins d'essais que Robot. <br> Ce qui fait de toi le vainqueur de cette partie ! </div>  <br><br> Merci d'avoir jouer, à bientôt :) "
     } else {
-        document.getElementById("AfficherConsigne").innerHTML = " Partie finie !<br><br> La machine réussi à faire moins essais que toi... <br> Retente vite ta chance ! "
+        document.getElementById("AfficherConsigne").innerHTML = " Partie finie !<br><br> Robot a réussi à faire moins essais que toi... <br> Retente vite ta chance ! "
     } 
     
 }

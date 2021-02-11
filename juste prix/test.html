@@ -8,22 +8,27 @@
 </head>
 <body>
     <section id="contenu">
-         <!-- Scores + Compteurs -->
+         <!--Faires afficher les compteurs   -->
             <section id="LesDonnes">
                 <section id="MonCompteur"> </section>
                 <section id="SonCompteur"></section>
             </section>
 
         <article id="input"> 
+            <!--Faires afficher les scores  -->
             <section id="LesScores">
                 <section id="MonScore"></section>
                 <section id="SonScore"></section>
             </section>
-            <section id ="AfficherConsigne">  Choisi un niveau de difficulté </section>
-            
+
+            <!-- PARTIE 1_1 : afficher consigne + bouton jouer  -->
+            <section id="AfficherConsigne">Bienvenue ! <br><br> Ta mission pour cette première partie est de trouver le chiffre mystérieux. <br><br> Tu devras rentrer des nombres compris entre 0 et 100,1000 ou 10 000 selon le niveau choisi.<br><br> A toi de jouer !  </section>
+            <section id="AfficherNiveaux"> <button id="BoutonAfficherNiveaux" type="button" onclick="Partie1_2();"> Jouer </button></section>
+
+
             <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2_1();"> Jouer </button></section>
             
-            <!--<section id ="JouerPartie1"> <button id="BoutonJouerPartie1" type="button" onclick="Partie1();"> Jouer </button></section> -->
+            
                 
             <!--Choix du niveau -->
             <section id ="Niveau">
@@ -33,9 +38,9 @@
             </section>
             
             <!--PARTIE 1 -->
-            <section id ="BoutonsPartie1">
+            <section id ="BoutonsPartie1_3">
                 <input type="number" id="recup" name="ChiffreADeviner" placeholder="Ex. : 5, 965, 3000... " required>
-                <button id="button" type="button"  onclick="Partie1();"> Valider </button>
+                <button id="button" type="button"  onclick="Partie1_3()"> Valider </button>
             </section>
             <section id ="MessageErreur"></section>
             <!-- PARTIE 2-->
@@ -45,16 +50,19 @@
                 <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
             </section> -->
                 <!-- PHASE 2 : Dire si c'est plus ou moins -->
-            <section id ="BoutonsPartie2-2">
+            <section id ="BoutonsPartie2_2">
                 <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
                 <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
                 <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
             </section>
-            </article>
-            <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> Faire generer un chiffre aléatoire </button></section>
 
-            
-            
+             <section id ="Rejouer"><button id="BoutonRejouer" type="button" onclick="Partie1_1()"> Rejouer </button></section>
+
+            </article>
+
+
+            <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> C'est bon ! </button></section>
+
                 <!--Plus et moins-->
         <section id=bulle></section>
         
@@ -63,7 +71,8 @@
 
         <!-- PARTIE 2-->
         <!-- Bloc contenant le chiffre aléatoire  -->
-        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span>
-        </span>
+        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
+        <img id="Robot" src="robot-design.svg">
+        
 </body>
 </html>
