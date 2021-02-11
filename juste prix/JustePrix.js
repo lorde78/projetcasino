@@ -51,7 +51,6 @@ function Niveau1(){
     ClickMax = 12 ;
     ClickMaxNiv = 11 ;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
-    console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
@@ -64,7 +63,6 @@ function Niveau2(){
     ClickMax = 17 ;
     ClickMaxNiv = 16 ;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
-    console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
@@ -77,7 +75,6 @@ function Niveau3(){
     ClickMax = 20 ;
     ClickMaxNiv =  19;
     ChiffreAleatoire = Math.floor(Math.random()*(max - min) + min);
-    console.log(ChiffreAleatoire);
     document.getElementById("Niveau").style.display= "none";
     document.getElementById("MonCompteur").style.display = "block" ;
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai :  " + ClickMax ;
@@ -89,7 +86,6 @@ function Niveau3(){
 // Partie 1_3 : Partie 1 du jeu 
 function Partie1_3() {
     var RecupChiffre = document.getElementById("recup").value ;
-    console.log(RecupChiffre);
     if (RecupChiffre == false) { // Si mon input est vide : renvoi un message d'erreur 
         document.getElementById("MessageErreur").style.display = "block" ;
         document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
