@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>défilement</title>
+        <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <style>
+            html{           /*Que HTML prenne la taille de ton navigateur*/
+                height:100%;
+                margin:0 auto;
+            }
+
+            body{
+                min-height:100%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .blue{
+                height:50px;
+                width:50px;
+                background-color:blue;
+            }
+
+            button{
+                width:5%;
+            }
+
+            #container{
+                height:500px;
+                width:1000px;
+                display:flex;
+                border:solid 1px black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button onlick="startGame()">Lancer la partie</button>
+
+        <button class="choix">Difficulté 1 : Facile</button>
+        <button class="choix">Difficulté 2 : Moyen</button>
+        <button class="choix">Difficulté 3 : Hard</button>
+        <button class="choix">Difficulté 4 : Impossible</button>
+
+        <article id="container">
+            <div></div>
+        </article>
+
+        <script>
+            var b1 = document.querySelector('button');
+            b1.addEventListener('click' , startGame);
+
+            var c1 = document.getElementsByClassName( "choix" );
+            c1.addEventListener('click' , setDifficulty);
+            var c2 = document.getElementsByClassName( "choix" );
+            c2.addEventListener('click' , setDifficulty);
+            var c3 = document.getElementsByClassName( "choix" );
+            c3.addEventListener('click' , setDifficulty);
+            var c4 = document.getElementsByClassName( "choix" );
+            c4.addEventListener('click' , setDifficulty);
+
+            function setDifficulty{
+                difficulty
+            }
+
+            function startGame(){
+
+                switch ( difficulty ) {
+                    case 1:
+                    setInterval(addSquare, 4000);       //Fonction qui ajoute un interval, sur le déclenchement d'une fonction par rapport a un temps en ms
+                    break;
+                    case 2:
+                    setInterval(addSquare, 3000);
+                    break;
+                    case 3:
+                    setInterval(addSquare, 2000);
+                    break;
+                    case 4:
+                    setInterval(addSquare, 1000);
+                    break;
+                    //...
+                    default:
+                    // Else
+                    // Code qui s'éxecute si tous les cas précédents sont faux.
+                    break;
+                   }    
+            }
+            
+            
+            
+            function level(){
+
+            }
+        </script>
+    </body>
+</html>

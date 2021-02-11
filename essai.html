@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>défilement</title>
+        <style>
+            html{           /*Que HTML prenne la taille de ton navigateur*/
+                height:100%;
+                margin:0 auto;
+            }
+
+            body{
+                min-height:100%;
+            }
+
+            article{
+                height:100px;
+                width:100px;
+                position: absolute;
+                top: 0;
+                left: -100px;
+                transition: all 1s;
+            }
+
+            .article-left{
+            	left: 100%;
+            }
+
+
+            .blue{
+                background-color:blue;
+                z-index:1;
+               
+            }
+
+            .container{
+            	width: 500px;
+            	height: 100px;
+            	overflow-x: hidden;
+            	border: 1px solid #000;
+            	position: relative;
+            	margin-top: 100px;
+            }
+
+            .red{
+                background-color:red;
+                z-index:2;
+
+            }
+
+            .green{
+                background-color:green;
+                z-index:1;
+                
+            }
+
+            @keyframes moove{
+                0%{
+                	transform: translateX(0px);
+                }
+                100%{
+                    transform: translateX(220px);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <button>Commencer le jeu</button>
+
+
+        <div class="container">
+
+        </div>
+
+        <script>
+        
+            var b1 = document.querySelector( 'button');
+            b1.addEventListener('click' , startGame);
+
+
+			var timer = 1000;
+
+
+            function addSquare(){
+
+            	console.log(timer);
+                
+            	if(timer > 300){
+					timer -= 50;
+            	}
+
+            	var transitionSeconds = timer/1000
+
+                var container = document.querySelector('.container')
+
+                var newArticle = document.createElement("article");
+
+                container.appendChild(newArticle)
+
+                newArticle.classList.add('blue')
+
+                newArticle.style.transition = transitionSeconds+'s linear';
+
+                setTimeout(function(){
+                	newArticle.classList.add('article-left')
+                }, 10)
+            }
+
+            function startGame(){
+            	 setInterval(addSquare, 1000);
+            }
+
+        </script>
+    </body>
+</html>

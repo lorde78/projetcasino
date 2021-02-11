@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>Casinofront</title>
+		<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+		<style>
+            
+            h1 {
+                font-weight: 900;
+                font-size: 50px
+            }
+
+            p {
+                font-weight:900;
+                font-size: 1.5rem;
+                align-self: center;
+            }
+            
+            article {
+                background-color:black;
+                height:500px
+            }
+
+            div{
+               height:200px;
+               width:100px;
+               margin-top: 200px;
+               display:flex;
+               justify-content: center;
+               font-size: 2rem;
+            }
+
+            section {
+                position:relative;
+            }
+
+            div.facile {
+                background-color:green;
+                position:absolute;
+                top:10px;
+                left:-100px;
+                animation: mouvement 3s linear;
+            }
+
+            div.moyen {
+                background-color:cyan;
+                position:absolute;
+                top:10px;
+                left:-100px;
+                animation: mouvement 3s linear;
+            }
+            div.hard {
+                background-color:orange;
+                position:absolute;
+                top:10px;
+                left:-100px;
+                animation: mouvement 3s linear;
+            }
+            div.impossible {
+                background-color:red;
+                position:absolute;
+                top:10px;
+                left:-100px;
+                animation: mouvement 3s linear;
+            }
+
+            div.limit-droite{
+                border-right:solid 3px red;
+                position:absolute;
+                left:1000px;
+            }
+
+            div.limit-gauche{
+                border-right:solid 3px red;
+                position:absolute;
+                left:900px;
+            }
+
+            aside{
+                display:flex;
+                width:100%;
+                justify-content:center;
+            }
+
+            div.tali{
+                border: solid 3px black;
+                width: 8%;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 100px;
+                font-size:1rem;
+                justify-content: space-evenly;
+            }
+
+            @keyframes mouvement {
+                    from {
+                        margin-left: 0%;
+                    }
+                    to {
+                        margin-left: 80%;
+                    }
+                }
+
+
+		</style>
+    </head>
+    <body>
+        <h1></h1>
+        <!-- Boutons de difficultés -->
+        <button onclick="SetDiff('facile')">Difficulté 1 : Facile</button>
+        <button onclick="SetDiff('moyen')">Difficulté 2 : Moyen</button>
+        <button onclick="SetDiff('hard')">Difficulté 3 : Hard</button>
+        <button onclick="SetDiff('impossible')">Difficulté 4 : Impossible</button>
+        <!-- Lancer le jeu -->
+        <button onclick="Startgame()" id="launch">Lancer le jeu</button>
+        <article>
+            <div class='limit-gauche'></div>
+            <div class='limit-droite'></div>
+            <section>
+            </section>
+            
+        </article>
+        
+        <!-- Le clicker -->
+        <aside>
+        <div class="tali">
+            <button onclick="reset()">Remettre à zéro</button>
+            <button onclick="clique()">Cliquer</button>
+            <p id="cliks">Clique : 0</p>
+        </div>
+    </aside>
+
+        <script>
+
+                    // Compteur
+            var compteur = 0;
+
+                    // Carré de jeu
+            var NbBody = 0
+            var monLaunch = document.getElementById("launch");
+            var compteur = 0;
+
+                    //Determine le nombre de carré
+            function getRandomIntInclusive(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+                console.log(max)
+                console.log(min)
+            }
+
+                    // Change la difficulté
+            function SetDiff(Diff) { 
+                monLaunch.className = ""
+                monLaunch.classList.add(Diff)
+            }
+
+            function getPosition(mouvement) {
+                var divElement = document.querySelector("div");
+                var results = divElement.getBoundingClientRect();
+                console.log(results.top, results.left);
+                if (mouvement) {
+                    window.requestAnimationFrame(getPosition);
+                  }
+            }
+                window.requestAnimationFrame(getPosition);
+
+
+
+                    // Lancer le jeu
+            function Startgame() {
+                reset()
+                NbBody = getRandomIntInclusive(40, 50)
+                console.dir(NbBody)
+                var maDiff = document.getElementById("launch").className
+                console.log(maDiff)
+
+                switch ( maDiff ) {
+                    case "facile" :
+                        document.querySelector("section").innerHTML = ""
+                        document.querySelector("h1").innerHTML = "GO ! FACILE"
+                        ecart = 1.22
+                        for (var index=0 ; index < NbBody ; index+=1) {
+                            let accel = 1-(index*0.01)
+                            let speed = index*2
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='facile' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
+
+                        }
+                        break;
+
+                    case "moyen" :
+                        console.log("vous êtes en moyen");
+                        document.querySelector("section").innerHTML = ""
+                        document.querySelector("h1").innerHTML = "GO ! MOYEN"
+                        ecart = 1.0675
+                        for (var index=0 ; index < NbBody ; index+=1 ) {
+                            let accel = 1-(index*0.01)
+                            let speed = index*1.75
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='moyen' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
+                        }
+                        break;
+
+                    case "hard" :
+                        console.log("vous êtes en hard");
+                        document.querySelector("section").innerHTML = ""
+                        document.querySelector("h1").innerHTML = "GO ! HARD"
+                        ecart = 0.7625
+                        for (var index=0 ; index < NbBody ; index+=1 ) {
+                            let accel = 1-(index*0.01)
+                            let speed = index*1.25
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='hard' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
+                        }
+                        break;
+
+                    case "impossible" :
+                        console.log("vous êtes en impossible");
+                        document.querySelector("h1").innerHTML = "GO ! IMPOSSIBLE"
+                        document.querySelector("section").innerHTML = ""
+                        ecart = 0.4575
+                        for (var index=0 ; index < NbBody ; index+=1 ) {
+                            let accel = 1-(index*0.01)
+                            let speed = index*0.75
+                            if (accel >= 0.8) {
+                                velocity = speed*accel
+                                console.log(velocity, "velocity","if")
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            } else {
+                                velocity += ecart
+                                console.log(velocity, "velocity","else")
+                                document.querySelector("section").innerHTML += "<div class='impossible' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>"
+                            }
+                        }
+                        break
+                }
+            }
+
+            // Le clicker
+
+            function clique() {
+                var divElement = document.querySelectorAll("div");
+                var condition = false;
+                for(let bite=0; bite < divElement.length ; bite ++){
+                    if (divElement[bite].getBoundingClientRect().left < 1000 && divElement[bite].getBoundingClientRect().left > 900){
+                        compteur = compteur + 1;
+                        condition = true;
+                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                    }
+                }
+                if (! condition){ 
+                        compteur = compteur - 1
+                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                    }
+            }
+
+            function reset() {
+                compteur = 0;
+                document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;       
+            }
+
+
+            // Success
+            //function success(){
+            //    object.addEventListener("animationend", myScript);
+            //}
+            
+        </script>
+    </body>
+</html>
