@@ -45,10 +45,10 @@ function Startgame() {
                 let speed = index*2;
                 if (accel >= 0.8) {
                     velocity = speed*accel;
-                    document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>^ _ ^</p></div>";
                 } else {
                     velocity += ecart;
-                    document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='facile carre' style='animation-delay:" + velocity + "s'<p>^ _ ^</p></div>";
                 }
                 totalVelocity = velocity;
             }
@@ -81,10 +81,10 @@ function Startgame() {
                 let speed = index*1.25;
                 if (accel >= 0.8) {
                     velocity = speed*accel;
-                    document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>0 _ 0</p></div>";
                 } else {
                     velocity += ecart;
-                    document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='hard carre' style='animation-delay:" + velocity + "s'<p>0 _ 0</p></div>";
                 }
                 totalVelocity = velocity;
             }
@@ -99,10 +99,10 @@ function Startgame() {
                 let speed = index*0.75;
                 if (accel >= 0.8) {
                     velocity = speed*accel;
-                    document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>O _ O</p></div>";
                 } else {
                     velocity += ecart;
-                    document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>o _ o</p></div>";
+                    document.querySelector("section").innerHTML += "<div class='impossible carre' style='animation-delay:" + velocity + "s'<p>O _ O</p></div>";
                 }
                 totalVelocity = velocity;
             }
@@ -119,13 +119,13 @@ function clique() {
         if (divElement[select].getBoundingClientRect().left < 1050 && divElement[select].getBoundingClientRect().left > 950){
             compteur = compteur + 1;
             condition = true;
-            document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>";
+            document.querySelector("#cliks").innerHTML = "<span>" + compteur + "</span>";
         }
     }
     // Permet de retirer les points
     if (! condition){ 
             compteur = compteur - 1;
-            document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>";
+            document.querySelector("#cliks").innerHTML = "<span>" + compteur + "</span>";
     }
     // Calcul du score
     score = (compteur/NbBody);
@@ -136,5 +136,5 @@ function clique() {
 // La fonction reset
 function reset() {
     compteur = 0;
-    document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>"  ;   
+    document.querySelector("#cliks").innerHTML = "<span>" + compteur + "</span>"  ;   
 }
