@@ -1,4 +1,4 @@
-// Carré de jeu
+// NOS VARIABLES GLOBALES
 var NbBody = 0;
 var monLaunch = document.getElementById("launch");
 var totalVelocity = 0;
@@ -116,7 +116,7 @@ function clique() {
     var condition = false;
     // Permet d'ajouter les points
     for(let select=0; select < divElement.length ; select ++){
-        if (divElement[select].getBoundingClientRect().left < 1000 && divElement[select].getBoundingClientRect().left > 900){
+        if (divElement[select].getBoundingClientRect().left < 1050 && divElement[select].getBoundingClientRect().left > 950){
             compteur = compteur + 1;
             condition = true;
             document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>";
