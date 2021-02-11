@@ -145,7 +145,7 @@
             <div class="tali">
                 <button onclick="reset()">Remettre à zéro</button>
                 <button onclick="clique()">Cliquer</button>
-                <p id="cliks">Clique : 0</p>
+                <p id="cliks">0 0</p>
             </div>
             <div class="score">
 
@@ -286,12 +286,12 @@
                     if (divElement[select].getBoundingClientRect().left < 1000 && divElement[select].getBoundingClientRect().left > 900){
                         compteur = compteur + 1;
                         condition = true;
-                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                        document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>";
                     }
                 }
                 if (! condition){ 
                         compteur = compteur - 1;
-                        document.querySelector("#cliks").innerHTML = "<p>Cliques : " + compteur;
+                        document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>";
                     }
                 score = (compteur/NbBody);
                 score = score*100;
@@ -303,7 +303,7 @@
 
             function reset() {
                 compteur = 0;
-                document.querySelector("#cliks").innerHTML = "<p>Clique : " + compteur;       
+                document.querySelector("#cliks").innerHTML = "<p>" + compteur + "</p>"  ;   
             }
 
 
