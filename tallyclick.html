@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="tallyclick.css">
+    <title>ClickGame</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="glow"><a href="landingpage.html">Neon Games</a></h1>
+        <nav>
+            <ul class="nav__items">
+                <li><a href="tallyclick.html" class="button">Tallyclick</a></li>
+                <li><a href="projet.html" class="button">Pixeldrawer</a></li>
+                <li><a href="puissanceq.html" class="button">Puissance4</a></li>
+                <li><a href="#" class="button">Jeux 4</a></li>
+                <li><a href="#" class="button">Jeux 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Message de Lancement -->
+        <h2></h2>
+
+        <!-- Boutons de difficultés -->
+        <button onclick="SetDiff('facile')">Difficulté 1 : Facile</button>
+        <button onclick="SetDiff('moyen')">Difficulté 2 : Moyen</button>
+        <button onclick="SetDiff('hard')">Difficulté 3 : Hard</button>
+        <button onclick="SetDiff('impossible')">Difficulté 4 : Impossible</button>
+
+        <!-- Lancer le jeu -->
+        <button onclick="Startgame()" id="launch">Lancer le jeu</button>
+
+        <!-- La fenêtre de jeu -->
+        <article>
+            <div class='limit-gauche'></div>
+            <div class='limit-droite'></div>
+            <section>
+
+            </section>
+        </article>
+
+        <!-- Le clicker -->
+        <aside>
+            <div class="tali">
+                <button onclick="reset()">Remettre à zéro</button>
+                <button onclick="clique()">Cliquer</button>
+                <p id="cliks">0 0</p>
+            </div>
+            <div class="score">
+
+            </div>
+        </aside>
+
+        <script type="text/javascript" src="tallyclick.js">
+        </script>
+
+</body>
+
+
+</html>
