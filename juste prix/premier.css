@@ -6,10 +6,6 @@ html{
     margin: 50px;
     padding: 20px;
     background-color: grey;
-    background-image:url(1.jpg);
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size: contain;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -19,7 +15,11 @@ html{
 
 #input{
     border-radius: 20px;
-    background-color: pink;
+    background-color: #187F9F;
+    background-image:url(1.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -192,4 +192,12 @@ html{
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
+}
+
+input:invalid {
+    border: 2px solid #AC00C1;
+}
+
+input:valid {
+border: 2px solid #348DA3;
 }
