@@ -11,17 +11,18 @@
          <!-- Scores + Compteurs -->
             <section id="LesDonnes">
                 <section id="MonCompteur"> </section>
-                <section id="SonScore"></section>
                 <section id="SonCompteur"></section>
             </section>
 
         <article id="input"> 
-
-            <section id="MonScore"></section>
+            <section id="LesScores">
+                <section id="MonScore"></section>
+                <section id="SonScore"></section>
+            </section>
             <section id ="AfficherConsigne">  Choisi un niveau de difficulté </section>
             
-            <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2();"> Jouer </button></section>
-
+            <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2_1();"> Jouer </button></section>
+            
             <!--<section id ="JouerPartie1"> <button id="BoutonJouerPartie1" type="button" onclick="Partie1();"> Jouer </button></section> -->
                 
             <!--Choix du niveau -->
@@ -49,9 +50,11 @@
                 <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
                 <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
             </section>
-            <button id="GenererChiffreAleatoire" type="button" onclick="Partie2()"> Generer un chiffre aléatoire </button>
-            
             </article>
+            <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> Faire generer un chiffre aléatoire </button></section>
+
+            
+            
                 <!--Plus et moins-->
         <section id=bulle></section>
         

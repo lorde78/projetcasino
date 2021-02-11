@@ -132,6 +132,8 @@ html{
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 #SonScore {
@@ -143,6 +145,10 @@ html{
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    
 }
 #SonCompteur {
     display : none;
@@ -158,7 +164,10 @@ html{
 #LesDonnes {
     display : flex;
 }
-
+#LesScores {
+    display : flex;
+    
+}
 #JouerPartie2 {
     justify-content: space-around; 
     margin-top: 20px;
