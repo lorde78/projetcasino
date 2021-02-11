@@ -107,13 +107,6 @@
                     }
                 }
 
-                .score{
-                    opacity:0;
-                }
-
-                .win{
-                    opacity:1;
-                }
 		</style>
     </head>
 
@@ -269,11 +262,6 @@
                         }
                         break
                 }
-                setTimeout(function(){
-                    appear = document.querySelector(".score");
-                    appear.className = "";
-                    appear.classList.add(win);
-                }, parseInt(totalvelocity*1000)+3000);
             }
 
             // Le clicker
