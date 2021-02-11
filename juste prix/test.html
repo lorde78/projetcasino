@@ -8,70 +8,61 @@
 </head>
 <body>
     <section id="contenu">
-         <!--Faires afficher les compteurs   -->
+         <!--Affiche les compteurs au dessus de l'image centrale  -->
             <section id="LesDonnes">
                 <section id="MonCompteur"> </section>
                 <section id="SonCompteur"></section>
             </section>
-
+        <!--Image centrale comportant les consignes + input + boutons + message d'erreur  -->
         <article id="input"> 
-            <!--Faires afficher les scores  -->
+            <!-- Les scores affichés à la fin de la partie  -->
             <section id="LesScores">
                 <section id="MonScore"></section>
                 <section id="SonScore"></section>
             </section>
 
-            <!-- PARTIE 1_1 : afficher consigne + bouton jouer  -->
-            <section id="AfficherConsigne">Bienvenue ! <br><br> Ta mission pour cette première partie est de trouver le chiffre mystérieux. <br><br> Tu devras rentrer des nombres compris entre 0 et 100,1000 ou 10 000 selon le niveau choisi.<br><br> A toi de jouer !  </section>
+            <!-- PARTIE 1_1 : Consigne première partie du jeu  + bouton jouer  -->
+            <section id="AfficherConsigne">Bienvenue ! <br><br> Ta mission pour cette première partie est de trouver le nombre mystère. <br><br> Tu devras rentrer des nombres compris entre 0 et 100,1000 ou 10 000 selon le niveau choisi.<br><br> A toi de jouer !  </section>
             <section id="AfficherNiveaux"> <button id="BoutonAfficherNiveaux" type="button" onclick="Partie1_2();"> Jouer </button></section>
-
-
-            <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2_1();"> Jouer </button></section>
-            
-            
-                
-            <!--Choix du niveau -->
+          
+            <!-- PARTIE 1_2 : Choix du niveau -->
             <section id ="Niveau">
                 <button type="button" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
                 <button type="button" onclick="Niveau2()" onmouseover="mouse(1, 1000)" onmouseleave="mouse(0, 1000)"> Niveau 2 </button>
                 <button type="button" onclick="Niveau3()" onmouseover="mouse(1, 10000)" onmouseleave="mouse(0, 10000)"> Niveau 3 </button>
             </section>
             
-            <!--PARTIE 1 -->
+            <!--PARTIE 1_3 : Jeu de la partie + Message d'erreur si valeur erronnée-->
             <section id ="BoutonsPartie1_3">
                 <input type="number" id="recup" name="ChiffreADeviner" placeholder="Ex. : 5, 965, 3000... " required>
                 <button id="button" type="button"  onclick="Partie1_3()"> Valider </button>
             </section>
             <section id ="MessageErreur"></section>
-            <!-- PARTIE 2-->
-                <!--PHASE 1 : Entrer un chiffre -->
-            <!--<section id ="BoutonsPartie2-">
-                <input type="tel" id="recup2" name="PlacerChiffre" placeholder="Enregistrer un chiffre " >
-                <button id="button2" type="button" onclick="EnregistrerChoix();"> Valider2 </button>
-            </section> -->
-                <!-- PHASE 2 : Dire si c'est plus ou moins -->
+
+            <!-- PARTIE 2_1 :  
+                Phase 1 : Consigne + bouton "jouer" -->
+            <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" onclick="Partie2_1();"> Jouer </button></section>
+                <!-- Phase 2 : Consigne + bouton "c'est bon"-->
+            <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> C'est bon ! </button></section>
+                
+            <!-- PARTIE 2_2 : Dire si c'est plus ou moins + Robot génère un chiffre aléatoire -->
             <section id ="BoutonsPartie2_2">
                 <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
                 <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
                 <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
             </section>
+            <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
+            
 
+            <!-- PARTIE 2_3 : Transition finale + bouton rejouer  -->
              <section id ="Rejouer"><button id="BoutonRejouer" type="button" onclick="Partie1_1()"> Rejouer </button></section>
-
             </article>
 
-
-            <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> C'est bon ! </button></section>
-
-                <!--Plus et moins-->
-        <section id=bulle></section>
-        
-        <!-- Souris over les boutons de niveau  -->
+            <!-- Partie 1_2 : Souris over les boutons de niveau, fais apparaitre une indication  -->
         <section id="Survol"></section>
-
-        <!-- PARTIE 2-->
-        <!-- Bloc contenant le chiffre aléatoire  -->
-        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
+            <!-- Partie 1_3: bulles "C'est plus" et "C'est moins"-->
+        <section id=bulle></section>
+            <!-- Partie 2_2 : Image du robot -->
         <img id="Robot" src="robot-design.svg">
         
 </body>
