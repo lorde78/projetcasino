@@ -49,7 +49,7 @@ header {
 }
 
 body {
-    background-color: #ccd0e6;
+    background-color: #05081c;
 }
 
 .card:hover {
@@ -143,7 +143,24 @@ h1 a {
 h2 {
     font-weight: 900;
     font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom:50px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    color:#fff;
 }
+
+#menujeu{
+    display:flex;
+    justify-content: center;
+}
+
+#launch, .menu{
+    
+}
+    
 
 p {
     font-weight:900;
@@ -180,7 +197,7 @@ div.facile {
     background-color:green;
     position:absolute;
     top: 20px;
-    left:-120px;
+    left:0px;
     animation: mouvement 3s linear;
     border-radius:20px;
     opacity:0;
@@ -190,7 +207,7 @@ div.moyen {
     background-color:cyan;
     position:absolute;
     top: 20px;
-    left:-120px;
+    left:0px;
     animation: mouvement 3s linear;
     border-radius:20px;
     opacity:0;
@@ -200,7 +217,7 @@ div.hard {
     background-color:orange;
     position:absolute;
     top: 20px;
-    left:-120px;
+    left:0px;
     animation: mouvement 3s linear;
     border-radius:20px;
     opacity:0;
@@ -210,7 +227,7 @@ div.impossible {
     background-color:red;
     position:absolute;
     top: 20px;
-    left:-120px;
+    left: 0px;
     animation: mouvement 3s linear;
     border-radius:20px;
     opacity:0;
@@ -219,8 +236,7 @@ div.impossible {
 div.limit-gauche {
     border-right:solid 3px red;
     position:absolute;
-    left:60%;
-    transform:translateX(-60%);
+    left:781px;
     display:none;
 }
 
@@ -330,31 +346,19 @@ section.tali{
 }
 
 #test {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 320px;
     border: 1px solid white;
-    border-radius:200px;
     transform-origin: 50% 50%;
     position:absolute;
     left:60%;
     transform:translateX(-60%);
-    padding-bottom: 50px;
+    margin-top: 20px !important;
     animation: flicker 1.5s infinite alternate;
+    -webkit-border-radius: 100px / 160px;
+    -moz-border-radius:    100px / 160px; 
+    border-radius:         100px / 160px; 
 }
- 
-@-webkit-keyframes rotating {
-    from{
-        -webkit-transform: rotate(0deg);
-    }
-    to{
-        -webkit-transform: rotate(360deg);
-    }
-}
- 
-.rotating {
-    -webkit-animation: rotating 4s linear infinite;
-}
-
 
 @keyframes mouvement {
         from {
@@ -363,8 +367,11 @@ section.tali{
         20% {
             opacity:1;
         }
-        75% {
+        65% {
             opacity:1;
+        }
+        90%{
+            opacity:0;
         }
         to {
             margin-left: 80%;
