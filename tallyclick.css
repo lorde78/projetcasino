@@ -383,6 +383,13 @@ section.tali{
     position:absolute;
     left:80px;
     margin-top:25px;
+    border-radius:50px;
+}
+
+.infobulle p.info{
+    color: black;
+    display:flex;
+    justify-content: center;
 }
 @keyframes mouvement {
         from {
