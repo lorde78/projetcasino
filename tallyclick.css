@@ -183,6 +183,7 @@ div.facile {
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
+    opacity:0;
 }
 
 div.moyen {
@@ -192,6 +193,7 @@ div.moyen {
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
+    opacity:0;
 }
 
 div.hard {
@@ -201,6 +203,7 @@ div.hard {
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
+    opacity:0;
 }
 
 div.impossible {
@@ -210,6 +213,7 @@ div.impossible {
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
+    opacity:0;
 }
 
 div.limit-droite {
@@ -336,6 +340,12 @@ section.tali{
 @keyframes mouvement {
         from {
             margin-left: 0%;
+        }
+        20% {
+            opacity:1;
+        }
+        75% {
+            opacity:1;
         }
         to {
             margin-left: 80%;
