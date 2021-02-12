@@ -64,6 +64,7 @@ h1 a {
     color: #fff;
     font-weight: bold;
 }
+
 h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -71,19 +72,45 @@ h4 {
   padding-bottom: 5px;
   padding-top: 8px;
 }
-h2 {
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+  p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+h2{
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   color: #fff;
   text-align: center;
   padding-top: 80px;
   text-transform: uppercase;
+  padding-bottom:50px;
 }
-  p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: #fff;
-  padding-bottom: 20px;
+
+main > ul li {
+  display:flex;
+  justify-content: center;
+}
+
+main > p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.averto{
+  padding-top: 20px;
+  color:rgba(230, 22, 22, 0.623);
 }
 .glow {
     font-size: 30px;
@@ -196,4 +223,8 @@ h2 {
         to {
        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
       }
+    }
+
+    {
+      
     }

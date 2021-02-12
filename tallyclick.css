@@ -50,7 +50,7 @@ header {
 }
 
 body {
-    background-color: #05081c;
+    background-color: #070b24;
 }
 
 .card:hover {
@@ -152,6 +152,7 @@ h2 {
     animation: glow 1s ease-in-out infinite alternate;
     color:#fff;
 }
+
 h3 {
     font-size:30px;
     font-weight:900;
@@ -159,7 +160,6 @@ h3 {
     position:absolute;
     top:200px;
     left:40px
-
 }
 
 #menujeu{
