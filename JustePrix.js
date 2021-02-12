@@ -26,7 +26,7 @@ function mouse(bin, nb) {
     const survol = document.querySelector("#Survol");
     const txt_lv= document.createElement("p");
     txt_lv.id = "txt";
-    txt_lv.innerHTML= "Trouve un nombre entre 0 et " + nb;
+    txt_lv.innerHTML= "Trouve un nombre entre 1 et " + nb;
     
     if (bin == 1) {
         survol.append(txt_lv);
@@ -55,7 +55,7 @@ function Niveau1(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block";
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 100";
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 1 et 100";
 }
 function Niveau2(){
     max  = 1000;
@@ -67,7 +67,7 @@ function Niveau2(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block"
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre compris entre 0 et 1000 " ;
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre compris entre 1 et 1000 " ;
 }
 function Niveau3(){
     max  = 10000;
@@ -79,13 +79,12 @@ function Niveau3(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai :  " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block"
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 10 000 " ;
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 1 et 10 000 " ;
 }
 
 // Partie 1_3 : Partie 1 du jeu 
 function Partie1_3() {
     var RecupChiffre = document.getElementById("recup").value ;
-    console.log(ChiffreAleatoire)
     if (RecupChiffre == false) { // Si mon input est vide : renvoi un message d'erreur 
         document.getElementById("MessageErreur").style.display = "block" ;
         document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 1 et " + max ;

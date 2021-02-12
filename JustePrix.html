@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
 	<title>Juste Prix</title>
-    <link rel="icon" href="robot-design.svg"/>
+    <link rel="icon" href="robot-design_copie.svg"/>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="JustePrix.css" />
     <script src="JustePrix.js"></script>
@@ -68,16 +68,20 @@
 
             <!-- PARTIE 2_3 : Transition finale + bouton rejouer  -->
              <section id ="Rejouer"><button id="BoutonRejouer" type="button" class="button_click" onclick='window.location.reload(false)' value="Rafraichir"> Rejouer </button></section>
-            </article>
-            <!-- PARTIE 2_2 : Robot génère un chiffre aléatoire -->
-            <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
-
+            
+             <!-- Partie 2_2 : Image du robot -->
+            <img id="Robot" src="robot-design_copie.svg">        
+        
             <!-- Partie 1_2 : Souris over les boutons de niveau, fais apparaitre une indication  -->
-        <section id="Survol"></section>
+            <section id="Survol"></section>
+
+        </article>
+            <!-- PARTIE 2_2 : Robot génère un chiffre aléatoire -->
+        <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
+
             <!-- Partie 1_3: bulles "C'est plus" et "C'est moins"-->
         <section id=bulle></section>
-            <!-- Partie 2_2 : Image du robot -->
-        <img id="Robot" src="robot-design.svg">
+
         
 </body>
 </html>

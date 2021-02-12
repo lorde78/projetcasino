@@ -169,12 +169,15 @@ h1 a {
     padding-left: 10%;
     height: 35%;
     width: 75%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 255, 0.555);
 }
 
 
 .pop_up {
     border-radius: 20px;
-    background-color: blue;
+    background-color: #05081c;
+    color: white;
+    border:solid blue;
     font-size: 20px;
     margin-bottom: 6%;
     padding-top: 15px;
@@ -192,12 +195,14 @@ h1 a {
 
 #BlocChiffreAleatoire {
     border-radius: 20px;
-    background-color: blue;
+    background-color: #05081c;
+    color: white;
+    border:solid blue;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 10px;
+    margin-top: 2%;
     text-align: center;
     margin-bottom: 10px;
     display: none;
@@ -217,17 +222,18 @@ h1 a {
     display: none;
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 #Survol p {
     border-radius: 20px ;
-    background-color : #CCD1D1 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 50px;
-    padding-left: 50px;
-   
+    text-align: center;
+    background-color : #05081c;
+    color: grey;
+    padding: 1%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border:solid rgba(0, 0, 255, 0.473) ;
 }
 
 #BoutonsPartie1_3{
@@ -239,7 +245,9 @@ h1 a {
 
 #AfficherConsigne {
     border-radius: 10px;
-    background-color: #E7AEEB ;
+    background-color: #05081c;
+    color: white;
+    border:solid white;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
@@ -249,17 +257,32 @@ h1 a {
     margin-bottom: 4%;
 }
 
-#MonCompteur {
+#MonCompteur{
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
+    border-radius: 10px;
+    border: solid blue;
+    background-color : #05081c;
+    color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 20px;
     padding-left: 20px;
-    text-align: center;
-    
+    text-align: center;   
 }
+
+#SonCompteur{
+    display : none;
+    border-radius: 10px;
+    border: solid blue;
+    background-color : #05081c;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;   
+}
+
 #MonScore {
     display : none;
     border-radius: 20px;
@@ -284,17 +307,6 @@ h1 a {
     padding-left: 20px;
     text-align: center;
     margin-left: 42%;
-}
-
-#SonCompteur {
-    display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center;
 }
 
 #LesDonnes {
@@ -363,9 +375,12 @@ border: 2px solid #348DA3;
     margin-bottom: 20px;
 }
 #Robot{
-    width: 40%;
-    height: 40%; 
+    margin-top: 35%;
+    margin-left: 35%;   
+    width: 80%;
+    height: 80%; 
     display: none;
+
 }
 
 #recup {
@@ -373,18 +388,20 @@ border: 2px solid #348DA3;
     margin: 2%;
 }
 
+
 .button_click {
     font-size: 16px;
     font-weight: 800;
     font-family: "Montserrat", sans-serif;
-    color: #A600BC;
+    color: blue;
     padding: 0.5rem 2rem 0.5rem 2.5rem;
-    border: 0.2rem solid #BBE8ED;
+    border: 0.35rem solid blue;
     border-radius: 2rem;
     animation: flicker 120s infinite alternate;
     transition: all 0s ease 0.0s;
     padding: 10px 20px;
     background-color: grey;
+    margin-right: 2%;
 }
 
 .button_click::-moz-selection {
@@ -399,4 +416,8 @@ border: 2px solid #348DA3;
 
 .button_click:focus {
     outline: none;
+}
+
+.button_click:hover {
+    font-size: 18px;
 }
