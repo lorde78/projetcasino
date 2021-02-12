@@ -1,27 +1,40 @@
-var joueur1 = document.querySelector('#joueur1');
-var currentColor = joueur1.value;
-var joueur2 = document.querySelector('#joueur2');
-var currentColor = joueur2.value;
-var click = false;
+var tour = document.getElementById("tour");
 
-joueur1.addEventListener('change', (event) => {
-  console.log(event.target.value);
-  currentColor = event.target.value;
 
-});
-joueur2.addEventListener('change', (event) => {
-	console.log(event.target.value);
-	currentColor = event.target.value;
-  
-  });
+var red = 1;
+var yellow = 2;
+
+var currentColor = "yellow";
+var currentColorGrid = yellow;
+var compteur = 0
+
+function changementjoueur() {
+	if ((compteur % yellow)== 0){
+		tour.innerHTML = '<span class="yellow">C\'est au tour du joueur jaune</span>';
+		currentColor = "yellow";
+		currentColorGrid = yellow;
+		compteurjoueur()
+	}
+	
+else {
+	tour.innerHTML = '<span class="red">C\'est au tour du joueur rouge</span>';
+		currentColor = "red";
+		currentColorGrid = red;
+		compteurjoueur()	
+}
+}
+function compteurjoueur(){
+	compteur=compteur+1
+}
+changementjoueur()
 var storage = window.localStorage;
 
 // zone nb colone et ligne
 var rows = 7;
 var columns = 6;
 //taille pixel
-var rowsPixel = "60px";
-var columnsPixel = "60px";
+var rowsPixel = "80px";
+var columnsPixel = "80px";
 //grille
 var zone = document.getElementById("zone");
 zone.style.gridTemplateColumns = "repeat(" + rows + ", " + rowsPixel +")"; // css en js
@@ -38,12 +51,12 @@ for (var line = 0; line < rows; line++) {
 		  else {
 			cell.style.backgroundColor = storage.getItem(cell.className);
 		  }  
-		  
-		
+
+
 		cell.style.width = rowsPixel;
 		cell.style.height = columnsPixel;
-		cell.style.borderRadius="25px"
-		
+		cell.style.borderRadius="50px"
+
 		storage.getItem(cell.className);
 
 		zone.appendChild(cell);
@@ -58,13 +71,14 @@ cells.forEach(function (cell) {
 				storage.setItem (cell.className,cell.style.backgroundColor)
 			}
 
-            console.log(cell.className);
+            
 		});
 		// quand la souris est cliqué
 		cell.addEventListener('mousedown', function () {
 			click = true;
 			cell.style.backgroundColor = currentColor;
 			storage.setItem (cell.className,cell.style.backgroundColor);
+			changementjoueur()
 		});
 		// quand la souris est relaché
 		cell.addEventListener('mouseup', function () {
