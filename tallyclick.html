@@ -29,15 +29,16 @@
         <h2></h2>
 
         <!-- Boutons de difficultés -->
-        <footer id='menujeu'>
-        <button class='menu' onclick="SetDiff('facile')">Level 1 : Easy</button>
-        <button class='menu' onclick="SetDiff('moyen')">Level 1 : Easy</button>
-        <button class='menu' onclick="SetDiff('hard')">Level 3 : Hard</button>
-        <button class='menu' onclick="SetDiff('impossible')">Level 4 : Godlike</button>
+        <aside id='menujeu'>
+            <h3>TallyClickCounter</h3>
+            <button class='menu' onclick="SetDiff('facile')">Level 1 : Easy</button>
+            <button class='menu' onclick="SetDiff('moyen')">Level 1 : Easy</button>
+            <button class='menu' onclick="SetDiff('hard')">Level 3 : Hard</button>
+            <button class='menu' onclick="SetDiff('impossible')">Level 4 : Godlike</button>
 
-        <!-- Lancer le jeu -->
-        <button class='menu' onclick="Startgame()" id="launch">Start Clicking</button>
-        </footer>
+            <!-- Lancer le jeu -->
+            <button class='menu' onclick="Startgame()" id="launch">Start Clicking</button>
+        </aside>
         <!-- La fenêtre de jeu -->
         <article>
             <div class='limit-gauche'></div>
@@ -59,6 +60,9 @@
             </section>
             <section>
                 <p class="score">Votre score est de :</p>
+            </section>
+            <section class="infobulle">
+
             </section>
         </aside>
     </main>
