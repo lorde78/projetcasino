@@ -145,7 +145,7 @@ h2 {
     font-size: 40px;
     text-align: center;
     padding-top: 50px;
-    padding-bottom:50px;
+    padding-bottom:20px;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
@@ -157,11 +157,6 @@ h2 {
     justify-content: center;
 }
 
-#launch, .menu{
-    
-}
-    
-
 p {
     font-weight:900;
     font-size: 1.5rem;
@@ -172,7 +167,7 @@ p {
 article {
     background-color: grey;
     height: 400px;
-    margin: 50px;
+    margin: 30px;
     padding: 20px;
     border-radius: 20px;
 }
@@ -253,7 +248,7 @@ section.tali{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom:10px;
     font-size:1rem;
     justify-content: space-evenly;
