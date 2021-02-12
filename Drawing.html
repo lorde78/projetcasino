@@ -23,17 +23,17 @@
         </nav>
     </header>
 
-    <h2>Pixel Drawer</h2>
+    <h2 id="titreoui">Pixel Drawer</h2>
 
 
-    <input type="button" id="reset" onclick="localStorage.clear();window.location.reload(false)" value="Effacer">
-    <div>
+    <button id="reset" onclick="localStorage.clear();window.location.reload(false)">Effacer</button>
+    
         <input type="color" id="palette" value="#fffff">
-        <label for="palette">Selecteur de couleur</label>
-
+        <label for="palette"><span>Selecteur de couleur</span></label>
+        <div id="backzone">
         <div id="zone"></div>
         </div>
-
+        
         <script type="text/javascript" src="Drawing.js"></script>
 
 </body>
