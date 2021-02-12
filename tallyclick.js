@@ -38,7 +38,7 @@ function Startgame() {
     switch ( maDiff ) {
         case "facile" :
             document.querySelector("section").innerHTML = "";
-            document.querySelector("h2").innerHTML = "GO ! FACILE";
+            document.querySelector("h2").innerHTML = "Easy mode loaded...";
             ecart = 1.22;
             for (var index=0 ; index < NbBody ; index+=1) {
                 let accel = 1-(index*0.01);
@@ -56,7 +56,7 @@ function Startgame() {
 
         case "moyen" :
             document.querySelector("section").innerHTML = "";
-            document.querySelector("h2").innerHTML = "GO ! MOYEN";
+            document.querySelector("h2").innerHTML = "Medium mode loaded...";
             ecart = 1.0675;
             for (var index=0 ; index < NbBody ; index+=1 ) {
                 let accel = 1-(index*0.01);
@@ -74,7 +74,7 @@ function Startgame() {
 
         case "hard" :
             document.querySelector("section").innerHTML = "";
-            document.querySelector("h2").innerHTML = "GO ! HARD";
+            document.querySelector("h2").innerHTML = "Hard mode loaded...";
             ecart = 0.7625;
             for (var index=0 ; index < NbBody ; index+=1 ) {
                 let accel = 1-(index*0.01);
@@ -91,7 +91,7 @@ function Startgame() {
             break;
 
         case "impossible" :
-            document.querySelector("h2").innerHTML = "GO ! IMPOSSIBLE";
+            document.querySelector("h2").innerHTML = "Godlike mode loaded...";
             document.querySelector("section").innerHTML = "";
             ecart = 0.4575;
             for (var index=0 ; index < NbBody ; index+=1 ) {
@@ -116,7 +116,7 @@ function clique() {
     var condition = false;
     // Permet d'ajouter les points
     for(let select=0; select < divElement.length ; select ++){
-        if (divElement[select].getBoundingClientRect().left < 1231 && divElement[select].getBoundingClientRect().left > 1078){
+        if (divElement[select].getBoundingClientRect().left < 1231 && divElement[select].getBoundingClientRect().left > 1000){
             compteur = compteur + 1;
             condition = true;
             document.querySelector("#cliks").innerHTML = "<span>" + compteur + "</span>";
