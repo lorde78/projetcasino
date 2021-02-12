@@ -381,15 +381,28 @@ section.tali{
     width:525px;
     height:200px;
     position:absolute;
-    left:80px;
+    left:250px;
     margin-top:25px;
     border-radius:50px;
+    padding:20px;
+    padding-top:35px;
+    word-break: normal;
 }
 
 .infobulle p.info{
     color: black;
-    display:flex;
-    justify-content: center;
+    font-size:18px
+}
+
+.rightarrow {
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    left:520px;
+    bottom:75px;
 }
 @keyframes mouvement {
         from {
