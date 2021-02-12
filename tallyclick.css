@@ -179,7 +179,7 @@ section {
 div.facile {
     background-color:green;
     position:absolute;
-    top:10px;
+    top: 20px;
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
@@ -189,7 +189,7 @@ div.facile {
 div.moyen {
     background-color:cyan;
     position:absolute;
-    top:10px;
+    top: 20px;
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
@@ -199,7 +199,7 @@ div.moyen {
 div.hard {
     background-color:orange;
     position:absolute;
-    top:10px;
+    top: 20px;
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
@@ -209,18 +209,11 @@ div.hard {
 div.impossible {
     background-color:red;
     position:absolute;
-    top:10px;
+    top: 20px;
     left:-120px;
     animation: mouvement 3s linear;
     border-radius:20px;
     opacity:0;
-}
-
-div.limit-droite {
-    border-right:solid 3px red;
-    position:absolute;
-    left:50%;
-    transform: translateX(-50%);
 }
 
 div.limit-gauche {
@@ -228,6 +221,7 @@ div.limit-gauche {
     position:absolute;
     left:60%;
     transform:translateX(-60%);
+    display:none;
 }
 
 aside {
@@ -335,6 +329,31 @@ section.tali{
     border-radius:10px;
 }
 
+#test {
+    width: 230px;
+    height: 230px;
+    border: 1px solid white;
+    border-radius:200px;
+    transform-origin: 50% 50%;
+    position:absolute;
+    left:60%;
+    transform:translateX(-60%);
+    padding-bottom: 50px;
+    animation: flicker 1.5s infinite alternate;
+}
+ 
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+ 
+.rotating {
+    -webkit-animation: rotating 4s linear infinite;
+}
 
 
 @keyframes mouvement {
