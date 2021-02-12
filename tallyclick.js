@@ -116,7 +116,7 @@ function clique() {
     var condition = false;
     // Permet d'ajouter les points
     for(let select=0; select < divElement.length ; select ++){
-        if (divElement[select].getBoundingClientRect().left < 875 && divElement[select].getBoundingClientRect().left > 775){
+        if (divElement[select].getBoundingClientRect().left < 1000 && divElement[select].getBoundingClientRect().left > 781){
             compteur = compteur + 1;
             condition = true;
             document.querySelector("#cliks").innerHTML = "<span>" + compteur + "</span>";
