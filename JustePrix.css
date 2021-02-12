@@ -285,28 +285,26 @@ h1 a {
 
 #MonScore {
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+    border-radius: 10px;
+    background-color : #05081c ;
+    color: white;
+    border:solid rgba(0, 0, 255, 0.493);
+    padding: 1.5%;
     text-align: center;
     margin-left: 10%;
-    /*margin-right: 40px;*/
-    /*margin-left: 40px;*/
+    margin-bottom: 3%;
 }
 
 #SonScore {
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+    border-radius: 10px;
+    background-color : #05081c ;
+    border:solid rgba(0, 0, 255, 0.493);
+    color: white;
+    padding: 1.5%;
     text-align: center;
-    margin-left: 42%;
+    margin-left: 40%;
+    margin-bottom: 3%;
 }
 
 #LesDonnes {
