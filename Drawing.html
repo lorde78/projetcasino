@@ -18,22 +18,27 @@
                 <li><a href="Drawing.html" class="button">Pixeldrawer</a></li>
                 <li><a href="puissanceq.html" class="button">Puissance4</a></li>
                 <li><a href="JustePrix.html" class="button">Justeprix</a></li>
-                <li><a href="#" class="button">Jeux 5</a></li>
             </ul>
         </nav>
     </header>
 
     <h2>Pixel Drawer</h2>
 
-
-    <input type="button" id="reset" onclick="localStorage.clear();window.location.reload(false)" value="Effacer">
-    <div>
-        <input type="color" id="palette" value="#fffff">
-        <label for="palette">Selecteur de couleur</label>
-
+<div id="buttonjeu">
+    <button id="reset" onclick="localStorage.clear();window.location.reload(false)">Reset</button>
+    <input type="color" id="palette" value="#fffff">
+    <label for="palette"><p id="white">Selecteur de couleur</p></label>
+</div>    
+        <div id="backzone">
         <div id="zone"></div>
         </div>
-
+        <div id="backregle">
+        <div id="regle">
+                <p> 
+                Faites preuve d'imagination, soyez libre, inventif, a vos pinceaux.
+                </p>
+        </div>
+        </div>
         <script type="text/javascript" src="Drawing.js"></script>
 
 </body>

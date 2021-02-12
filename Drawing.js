@@ -13,8 +13,8 @@ var storage = window.localStorage;
 var rows = 80;
 var columns = 80;
 //taille pixel
-var rowsPixel = "5px";
-var columnsPixel = "5px";
+var rowsPixel = "10px";
+var columnsPixel = "10px";
 //grille
 var zone = document.getElementById("zone");
 zone.style.gridTemplateColumns = "repeat(" + rows + ", " + rowsPixel +")"; // css en js
