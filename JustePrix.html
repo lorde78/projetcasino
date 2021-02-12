@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-	<title>TestCherine</title>
+	<title>Juste Prix</title>
+    <link rel="icon" href="robot-design.svg"/>
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="JustePrix.css" />
     <script src="JustePrix.js"></script>
@@ -40,14 +41,14 @@
           
             <!-- PARTIE 1_2 : Choix du niveau -->
             <section id ="Niveau">
-                <button type="button" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
-                <button type="button" onclick="Niveau2()" onmouseover="mouse(1, 1000)" onmouseleave="mouse(0, 1000)"> Niveau 2 </button>
-                <button type="button" onclick="Niveau3()" onmouseover="mouse(1, 10000)" onmouseleave="mouse(0, 10000)"> Niveau 3 </button>
+                <button type="button" class="button_click" onclick="Niveau1()" onmouseover="mouse(1, 100)" onmouseleave="mouse(0, 100)"> Niveau 1 </button>
+                <button type="button" class="button_click" onclick="Niveau2()" onmouseover="mouse(1, 1000)" onmouseleave="mouse(0, 1000)"> Niveau 2 </button>
+                <button type="button" class="button_click" onclick="Niveau3()" onmouseover="mouse(1, 10000)" onmouseleave="mouse(0, 10000)"> Niveau 3 </button>
             </section>
             
             <!--PARTIE 1_3 : Jeu de la partie + Message d'erreur si valeur erronnée-->
             <section id ="BoutonsPartie1_3">
-                <input type="number" id="recup" name="ChiffreADeviner" placeholder="Ex. : 5, 965, 3000... " required>
+                <input type="number" id="recup" name="ChiffreADeviner" placeholder="Ex. : 71,77,05 " required>
                 <button id="button" type="button"  onclick="Partie1_3()"> Valider </button>
             </section>
             <section id ="MessageErreur"></section>
@@ -58,18 +59,18 @@
                 <!-- Phase 2 : Consigne + bouton "c'est bon"-->
             <section id ="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button" onclick="Partie2_2()"> C'est bon ! </button></section>
                 
-            <!-- PARTIE 2_2 : Dire si c'est plus ou moins + Robot génère un chiffre aléatoire -->
+            <!-- PARTIE 2_2 : Dire si c'est plus ou moins -->
             <section id ="BoutonsPartie2_2">
-                <button id="buttonPlus" type="button" onclick="CestPlus()"> C'est plus </button>
+                <button id="buttonPlus"  type="button" onclick="CestPlus()"> C'est plus </button>
                 <button id="buttonMoins" type="button" onclick="CestMoins()"> C'est moins </button>
                 <button id="buttonCestCa" type="button" onclick="CestCa()"> C'est ça ! </button>
             </section>
-            <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
-            
 
             <!-- PARTIE 2_3 : Transition finale + bouton rejouer  -->
-             <section id ="Rejouer"><button id="BoutonRejouer" type="button" onclick="Partie1_1()"> Rejouer </button></section>
+             <section id ="Rejouer"><button id="BoutonRejouer" type="button" onclick='window.location.reload(false)' value="Rafraichir"> Rejouer </button></section>
             </article>
+            <!-- PARTIE 2_2 : Robot génère un chiffre aléatoire -->
+            <span id="BlocChiffreAleatoire"> <span id ="LeChiffreAleatoire2"></span></span>
 
             <!-- Partie 1_2 : Souris over les boutons de niveau, fais apparaitre une indication  -->
         <section id="Survol"></section>

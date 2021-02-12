@@ -6,7 +6,6 @@ function appear(nb, RecupChiffre) {
     var apparition = document.createElement("p");
     apparition.classList.add("pop_up");
     apparition.innerHTML = RecupChiffre + " -  C'est " + nb;
-    
     bulle.insertBefore(apparition, bulle.firstChild);
 }
 // --------------------------------------------------------------
@@ -86,29 +85,23 @@ function Niveau3(){
 // Partie 1_3 : Partie 1 du jeu 
 function Partie1_3() {
     var RecupChiffre = document.getElementById("recup").value ;
+    console.log(ChiffreAleatoire)
     if (RecupChiffre == false) { // Si mon input est vide : renvoi un message d'erreur 
         document.getElementById("MessageErreur").style.display = "block" ;
         document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
     }
-    if (RecupChiffre == true) { // Si mon input est bon : incrémentation de 1 au score et décrémentation de 1 au compteur à rebours 
-        score1+= 1; 
-        document.getElementById("recup").innerHTML = score1;
-        ClickMax -= 1;
-        document.getElementById("button").value = ClickMax;
-        document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
-    }
-    if (score1== ClickMaxNiv){ // Si le score = au nombre d'essai max : le jeu est fini
+    else if (score1== ClickMaxNiv){ // Si le score = au nombre d'essai max : le jeu est fini
         document.getElementById("MessageErreur").style.display = "none" ;
         score1 +=1
         ClickMax = ClickMaxNiv;
         Transition()
     } 
-    if (RecupChiffre > ChiffreAleatoire) { // Permet de generer une bulle "c'est moins"
+    else if (RecupChiffre > ChiffreAleatoire) { // Permet de generer une bulle "c'est moins"
         if (RecupChiffre > max) { // Permet de contrôler les chiffres hors limtes (du max)
             document.getElementById("MessageErreur").style.display = "block" ;
             document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
         } else {
-            RecupChiffre == true 
+            RecupChiffre == true
             score1+= 1; 
             document.getElementById("recup").innerHTML = score1;
             ClickMax -= 1;
@@ -118,7 +111,7 @@ function Partie1_3() {
             appear("moins", RecupChiffre);
     }} 
 
-    if (RecupChiffre < ChiffreAleatoire){ // Permet de generer une bulle "c'est plus"
+    else if (RecupChiffre < ChiffreAleatoire){ // Permet de generer une bulle "c'est plus"
         if (RecupChiffre < min) { // Permet de contrôler les chiffres hors limtes (du max)
             document.getElementById("MessageErreur").style.display = "block" ;
             document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
@@ -132,7 +125,7 @@ function Partie1_3() {
             document.getElementById("MessageErreur").style.display = "none" ;
             appear("plus", RecupChiffre);
     }}
-    if(RecupChiffre == ChiffreAleatoire) { // L'Humain a trouvé la reponse : le jeu est fini 
+    else if(RecupChiffre == ChiffreAleatoire) { // L'Humain a trouvé la reponse : le jeu est fini 
         document.getElementById("MessageErreur").style.display = "none" ;
         ClickMax = ClickMaxNiv;
         return Transition()
