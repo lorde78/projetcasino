@@ -47,7 +47,7 @@ header {
 }
 
 body {
-    background-color: #05081c;
+    background-color: #070b24;
 }
 
 .card:hover {
@@ -177,7 +177,7 @@ h1 a {
     width: 75%;
     border-radius: 20px;
     padding: 1%;
-    background-color: #05081c;
+    background-color: #070b24;
     display: flex;
     flex-direction: column;
     align-items: center;
