@@ -188,3 +188,29 @@ font-family: "Montserrat", sans-serif;
     padding: 4px;
 }
 
+#regle {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+}
+#backregle{
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#esp{
+    color: blue;
+}
+
+#regle , p {
+padding: 10px;
+color: black;
+}
+
+#white{
+    color: white;
+}
