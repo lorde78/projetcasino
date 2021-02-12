@@ -266,14 +266,15 @@ section.tali{
     background-color:grey;
     border-radius: 50px;
     position: absolute;
-    top:10px;
+    top:0px;
     font-weight: 900;
+    z-index:2;
 }
 
 #cliks {
     background-color:black;
     height: 75px;
-    width:130px;
+    width:150px;
     position:absolute;
     top:80px;
     color:white;
@@ -281,7 +282,6 @@ section.tali{
     text-align: center;
     padding-top:10px;
     border:solid 10px #424242;
-
 }
 
 #reset {
@@ -291,17 +291,39 @@ section.tali{
     height:30px;
     background-color: #9E9E9E;
     border:solid 1px black;
-    outline:none
+    outline:none;
 }
 
 #tigefer {
     background-color:#616161;
     height:30px;
     position:absolute;
-    bottom:165px;
+    bottom:175px;
     height:10px;
     width:20px;
     border:solid 1px black;
+    border-radius:10px;
+    z-index: 1;
+}
+
+#tigefer2 {
+    background-color:black;
+    height:30px;
+    position:absolute;
+    bottom:173px;
+    height:10px;
+    width:21px;
+    border:solid 1px black;
+}
+
+#fauxreset {
+    height:40px;
+    width:50px;
+    background-color: black;
+    position:absolute;
+    left:180px;
+    top:20px;
+    z-index:-1;
     border-radius:10px;
 }
 
