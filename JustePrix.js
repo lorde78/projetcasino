@@ -38,7 +38,13 @@ function mouse(bin, nb) {
 }
 // --------------------------------------------------------------
 // Partie 1_1 : Consignes du jeu générée à l'ouverture de la page 
-
+function Debut() {
+    var regles = document.getElementById("regles");
+    regles.remove();
+    var commencer = document.getElementById("Commencer");
+    commencer.remove();
+    document.getElementById("input").style.display = "block";
+}
 // Partie 1_2 : Choisir le niveau 
 function Partie1_2(){
     document.getElementById("Niveau").style.display = "block" ;
