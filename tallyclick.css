@@ -1,3 +1,4 @@
+/* ------------------------------------------------------- */
 /* CSS DE LA PAGE */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 :root {
@@ -138,7 +139,7 @@ h1 a {
     }
 }
 
-
+/* ------------------------------------------------------- */
 /* CSS DU JEU */
 h2 {
     font-weight: 900;
@@ -291,6 +292,7 @@ section.tali{
     font-size:30px;
 }
 
+/* ------------------------------------------------------- */
 /* Style du Clicker */
 #pushclick {
     outline:none;
@@ -376,6 +378,8 @@ section.tali{
     border-radius:         100px / 160px; 
 }
 
+/* ------------------------------------------------------- */
+/* Style de l'infobulle */
 .infobulle {
     background-color:white;
     width:525px;
@@ -404,6 +408,7 @@ section.tali{
     left:520px;
     bottom:75px;
 }
+
 @keyframes mouvement {
         from {
             margin-left: 0%;

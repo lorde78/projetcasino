@@ -1,8 +1,11 @@
+// ---------------------------------------------------------------
 // NOS VARIABLES GLOBALES
 var NbBody = 0;
 var monLaunch = document.getElementById("launch");
 var totalVelocity = 0;
 
+// ---------------------------------------------------------------
+// LES FONCTIONS
 
 //Determine le nombre de carré
 function getRandomIntInclusive(min, max) {
@@ -34,6 +37,7 @@ function Startgame() {
     NbBody = getRandomIntInclusive(40, 50);
     console.log("Nombre de personnages : ",NbBody);
     var maDiff = document.getElementById("launch").className;
+
     // Switch selon la difficulté souhaitée
     switch ( maDiff ) {
         case "facile" :
