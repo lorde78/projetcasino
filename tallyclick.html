@@ -48,14 +48,17 @@
 
         <!-- Le clicker + le score -->
         <aside>
-            <div class="tali">
-                <button onclick="reset()">Remettre à zéro</button>
-                <button onclick="clique()">Cliquer</button>
-                <p id="cliks">0 0</p>
-            </div>
-            <div class="score">
-
-            </div>
+            <section class="tali">
+                <div id="tigefer"></div>
+                <div id="tigefer2"></div>
+                <div id="fauxreset"></div>
+                <button id="reset" onclick="reset()">Remettre à zéro</button>
+                <span id="cliks">0 0 0 0</span>
+                <button id="pushclick" onclick="clique()">PUSH</button>
+            </section>
+            <section>
+                <p class="score">Votre score est de :</p>
+            </section>
         </aside>
     </main>
 
