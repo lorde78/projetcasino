@@ -47,7 +47,7 @@ header {
 }
 
 body {
-    background-color: #ccd0e6;
+    background-color: #05081c;
 }
 
 .card:hover {
@@ -137,149 +137,203 @@ h1 a {
     }
 }
 
+#titre {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#regles{
+    text-align: center;
+    margin-top: 4%;
+    font-size: 18px;
+    font-family: "Montserrat";
+    color: white;
+    line-height: 1.4em;
+}
+
+#regles a {
+    text-decoration: underline;
+}
+
+#Commencer {
+    display: block;
+   margin : auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
 #contenu{
-    margin: 50px;
-    padding: 20px;
-    background-color: grey;
-    height: 600px;
+    font-family: "Montserrat";
+    font-size: 1.5em;
+    margin-bottom: 5%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    height: 65em;
+    width: 75%;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: #05081c;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
     align-items: center;
 }
 
 #input{
+    display: none;
     border-radius: 20px;
-    background-color: #187F9F;
-    background-image:url(1.jpg);
+    background-color: grey;
+    /*background-image:url(1.jpg);
     background-repeat:no-repeat;
     background-position:center center;
-    background-size: cover;
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 70px;
-    padding-left: 70px;
-    margin-bottom: 40px;
+    background-size: cover;*/
+    margin-top: 4%;
+    margin-bottom: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 10%;
+    padding-left: 10%;
+    height: 36%;
+    width: 75%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 255, 0.555);
 }
 
 
 .pop_up {
     border-radius: 20px;
-    background-color: blue;
+    background-color: #05081c;
+    color: white;
+    border:solid blue;
     font-size: 20px;
-    margin: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-bottom: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+}
+
+#bulle {
+    height: 65%;
+    width: 20%;
 }
 
 
 #BlocChiffreAleatoire {
     border-radius: 20px;
-    background-color: blue;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-top: 10px;
+    background-color: #05081c;
+    color: white;
+    border:solid blue;
+    padding: 1%;
+    margin-top: -12%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
     display: none;
 }
 
 
 #Niveau  {
     justify-content: space-around; 
-    margin-top: 20px;
+    margin-top: 2%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     display: none;
 }
 
 #BoutonsPartie2_2 {
-    margin-top: 20px;
+    margin-top: 2%;
     display: none;
     text-align: center;
-    margin-bottom: 20px;
-
+    margin-bottom: 2%;
 }
 
 #Survol p {
     border-radius: 20px ;
-    background-color : #CCD1D1 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 50px;
-    padding-left: 50px;
-   
+    text-align: center;
+    background-color : #05081c;
+    color: grey;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border:solid rgba(0, 0, 255, 0.473) ;
 }
 
 #BoutonsPartie1_3{
     display: none;
-    margin-top: 20px;
+    margin-top: 2%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 
 #AfficherConsigne {
     border-radius: 10px;
-    background-color: #E7AEEB ;
+    background-color: #05081c;
+    color: white;
+    border:solid white;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 10px;
+    margin-top: 2%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 4%;
+    line-height: 1.2em;
 }
 
-#MonCompteur {
+#MonCompteur{
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
+    border-radius: 10px;
+    border: solid blue;
+    background-color : #05081c;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;   
+}
+
+#SonCompteur{
+    display : none;
+    border-radius: 10px;
+    border: solid blue;
+    background-color : #05081c;
+    color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
-    
+    margin-top: 2%;  
 }
+
 #MonScore {
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+    border-radius: 10px;
+    background-color : #05081c ;
+    color: white;
+    border:solid rgba(0, 0, 255, 0.493);
+    padding: 1.5%;
     text-align: center;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-left: 10%;
+    margin-bottom: 3%;
 }
 
 #SonScore {
     display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+    border-radius: 10px;
+    background-color : #05081c ;
+    border:solid rgba(0, 0, 255, 0.493);
+    color: white;
+    padding: 1.5%;
     text-align: center;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-#SonCompteur {
-    display : none;
-    border-radius: 20px;
-    background-color : #5217F2 ;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 3%;
 }
 
 #LesDonnes {
@@ -287,6 +341,7 @@ h1 a {
 }
 #LesScores {
     display : flex;
+    align-items: space-between;
 }
 #JouerPartie2 {
     justify-content: space-around; 
@@ -305,10 +360,10 @@ h1 a {
 }
 
 #BoutonJouerPartie1_3 {
-    justify-content: space-around; 
-    margin-top: 20px;
+    justify-content: space-around;
+    padding: 1%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     display: none;
 }
 
@@ -347,8 +402,48 @@ border: 2px solid #348DA3;
     margin-bottom: 20px;
 }
 #Robot{
-    width: 110%;
-    height: 110%; 
+    margin-top: 9%;
+    margin-left: 35%;   
+    width: 80%;
+    height: 80%; 
     display: none;
 }
 
+#recup {
+    padding: 1%;
+    margin: 2%;
+}
+
+
+.button_click {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    color: blue;
+    padding: 0.5rem 2rem 0.5rem 2.5rem;
+    border: 0.35rem solid blue;
+    border-radius: 2rem;
+    animation: flicker 120s infinite alternate;
+    transition: all 0s ease 0.0s;
+    padding: 10px 20px;
+    background-color: grey;
+    margin-right: 2%;
+}
+
+.button_click::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+}
+
+.button_click::selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+}
+
+.button_click:focus {
+    outline: none;
+}
+
+.button_click:hover {
+    font-size: 18px;
+}

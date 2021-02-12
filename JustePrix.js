@@ -6,7 +6,6 @@ function appear(nb, RecupChiffre) {
     var apparition = document.createElement("p");
     apparition.classList.add("pop_up");
     apparition.innerHTML = RecupChiffre + " -  C'est " + nb;
-    
     bulle.insertBefore(apparition, bulle.firstChild);
 }
 // --------------------------------------------------------------
@@ -27,7 +26,7 @@ function mouse(bin, nb) {
     const survol = document.querySelector("#Survol");
     const txt_lv= document.createElement("p");
     txt_lv.id = "txt";
-    txt_lv.innerHTML= "Trouve un nombre entre 0 et " + nb;
+    txt_lv.innerHTML= "Trouve un nombre entre 1 et " + nb;
     
     if (bin == 1) {
         survol.append(txt_lv);
@@ -39,7 +38,13 @@ function mouse(bin, nb) {
 }
 // --------------------------------------------------------------
 // Partie 1_1 : Consignes du jeu générée à l'ouverture de la page 
-
+function Debut() {
+    var regles = document.getElementById("regles");
+    regles.remove();
+    var commencer = document.getElementById("Commencer");
+    commencer.remove();
+    document.getElementById("input").style.display = "block";
+}
 // Partie 1_2 : Choisir le niveau 
 function Partie1_2(){
     document.getElementById("Niveau").style.display = "block" ;
@@ -56,7 +61,7 @@ function Niveau1(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block";
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 100";
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 1 et 100";
 }
 function Niveau2(){
     max  = 1000;
@@ -68,7 +73,7 @@ function Niveau2(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block"
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre compris entre 0 et 1000 " ;
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre compris entre 1 et 1000 " ;
 }
 function Niveau3(){
     max  = 10000;
@@ -80,7 +85,7 @@ function Niveau3(){
     document.getElementById("MonCompteur").innerHTML = "Nombre d'essai :  " + ClickMax ;
     document.getElementById("BoutonsPartie1_3").style.display = "block"
     document.getElementById("AfficherConsigne").style.display = "block"
-    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 0 et 10 000 " ;
+    document.getElementById("AfficherConsigne").innerHTML = "Trouve le nombre mystère, compris entre 1 et 10 000 " ;
 }
 
 // Partie 1_3 : Partie 1 du jeu 
@@ -88,27 +93,20 @@ function Partie1_3() {
     var RecupChiffre = document.getElementById("recup").value ;
     if (RecupChiffre == false) { // Si mon input est vide : renvoi un message d'erreur 
         document.getElementById("MessageErreur").style.display = "block" ;
-        document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
+        document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 1 et " + max ;
     }
-    if (RecupChiffre == true) { // Si mon input est bon : incrémentation de 1 au score et décrémentation de 1 au compteur à rebours 
-        score1+= 1; 
-        document.getElementById("recup").innerHTML = score1;
-        ClickMax -= 1;
-        document.getElementById("button").value = ClickMax;
-        document.getElementById("MonCompteur").innerHTML = "Nombre d'essai : " + ClickMax  ;
-    }
-    if (score1== ClickMaxNiv){ // Si le score = au nombre d'essai max : le jeu est fini
+    else if (score1== ClickMaxNiv){ // Si le score = au nombre d'essai max : le jeu est fini
         document.getElementById("MessageErreur").style.display = "none" ;
         score1 +=1
         ClickMax = ClickMaxNiv;
         Transition()
     } 
-    if (RecupChiffre > ChiffreAleatoire) { // Permet de generer une bulle "c'est moins"
+    else if (RecupChiffre > ChiffreAleatoire) { // Permet de generer une bulle "c'est moins"
         if (RecupChiffre > max) { // Permet de contrôler les chiffres hors limtes (du max)
             document.getElementById("MessageErreur").style.display = "block" ;
-            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
+            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 1 et " + max ;
         } else {
-            RecupChiffre == true 
+            RecupChiffre == true
             score1+= 1; 
             document.getElementById("recup").innerHTML = score1;
             ClickMax -= 1;
@@ -118,10 +116,10 @@ function Partie1_3() {
             appear("moins", RecupChiffre);
     }} 
 
-    if (RecupChiffre < ChiffreAleatoire){ // Permet de generer une bulle "c'est plus"
+    else if (RecupChiffre < ChiffreAleatoire){ // Permet de generer une bulle "c'est plus"
         if (RecupChiffre < min) { // Permet de contrôler les chiffres hors limtes (du max)
             document.getElementById("MessageErreur").style.display = "block" ;
-            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 0 et " + max ;
+            document.getElementById("MessageErreur").innerHTML = "Le nombre doit être compris entre 1 et " + max ;
         } else  {
             RecupChiffre == true
             score1+= 1; 
@@ -132,7 +130,7 @@ function Partie1_3() {
             document.getElementById("MessageErreur").style.display = "none" ;
             appear("plus", RecupChiffre);
     }}
-    if(RecupChiffre == ChiffreAleatoire) { // L'Humain a trouvé la reponse : le jeu est fini 
+    else if(RecupChiffre == ChiffreAleatoire) { // L'Humain a trouvé la reponse : le jeu est fini 
         document.getElementById("MessageErreur").style.display = "none" ;
         ClickMax = ClickMaxNiv;
         return Transition()
