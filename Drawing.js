@@ -53,13 +53,13 @@ cells.forEach(function (cell) {
             console.log(cell.className);
 		});
 		// quand la souris est cliqué
-		cell.addEventListener('mousedown', function () {
+		cell.addEventListener('mousedown', function () { //insipiré du commentaire de Damien dans le channel groupe 6
 			click = true;
 			cell.style.backgroundColor = currentColor;
 			storage.setItem (cell.className,cell.style.backgroundColor);
 		});
 		// quand la souris est relaché
-		cell.addEventListener('mouseup', function () {
+		cell.addEventListener('mouseup', function () { //insipiré du commentaire de Damien dans le channel groupe 6
 			click = false;
 		});
 });
