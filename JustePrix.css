@@ -147,7 +147,7 @@ h1 a {
     font-weight: bold;
 }
 
-#regles{
+#regles {
     text-align: center;
     margin-top: 4%;
     font-size: 18px;
@@ -162,12 +162,12 @@ h1 a {
 
 #Commencer {
     display: block;
-   margin : auto;
+    margin: auto;
     margin-top: 3%;
     margin-bottom: 5%;
 }
 
-#contenu{
+#contenu {
     font-family: "Montserrat";
     font-size: 1.5em;
     margin-bottom: 5%;
@@ -183,7 +183,7 @@ h1 a {
     align-items: center;
 }
 
-#input{
+#input {
     display: none;
     border-radius: 20px;
     background-color: grey;
@@ -202,12 +202,11 @@ h1 a {
     box-shadow: 0px 0px 25px rgba(0, 0, 255, 0.555);
 }
 
-
 .pop_up {
     border-radius: 20px;
     background-color: #05081c;
     color: white;
-    border:solid blue;
+    border: solid blue;
     font-size: 20px;
     margin-bottom: 6%;
     padding-top: 3%;
@@ -222,12 +221,11 @@ h1 a {
     width: 20%;
 }
 
-
 #BlocChiffreAleatoire {
     border-radius: 20px;
     background-color: #05081c;
     color: white;
-    border:solid blue;
+    border: solid blue;
     padding: 1%;
     margin-top: -12%;
     text-align: center;
@@ -235,9 +233,8 @@ h1 a {
     display: none;
 }
 
-
-#Niveau  {
-    justify-content: space-around; 
+#Niveau {
+    justify-content: space-around;
     margin-top: 2%;
     text-align: center;
     margin-bottom: 2%;
@@ -252,18 +249,18 @@ h1 a {
 }
 
 #Survol p {
-    border-radius: 20px ;
+    border-radius: 20px;
     text-align: center;
-    background-color : #05081c;
+    background-color: #05081c;
     color: grey;
     padding: 2%;
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
-    border:solid rgba(0, 0, 255, 0.473) ;
+    border: solid rgba(0, 0, 255, 0.473);
 }
 
-#BoutonsPartie1_3{
+#BoutonsPartie1_3 {
     display: none;
     margin-top: 2%;
     text-align: center;
@@ -274,7 +271,7 @@ h1 a {
     border-radius: 10px;
     background-color: #05081c;
     color: white;
-    border:solid white;
+    border: solid white;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
@@ -285,39 +282,39 @@ h1 a {
     line-height: 1.2em;
 }
 
-#MonCompteur{
-    display : none;
+#MonCompteur {
+    display: none;
     border-radius: 10px;
     border: solid blue;
-    background-color : #05081c;
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center;   
-}
-
-#SonCompteur{
-    display : none;
-    border-radius: 10px;
-    border: solid blue;
-    background-color : #05081c;
+    background-color: #05081c;
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
-    margin-top: 2%;  
+}
+
+#SonCompteur {
+    display: none;
+    border-radius: 10px;
+    border: solid blue;
+    background-color: #05081c;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-top: 2%;
 }
 
 #MonScore {
-    display : none;
+    display: none;
     border-radius: 10px;
-    background-color : #05081c ;
+    background-color: #05081c;
     color: white;
-    border:solid rgba(0, 0, 255, 0.493);
+    border: solid rgba(0, 0, 255, 0.493);
     padding: 1.5%;
     text-align: center;
     margin-left: 10%;
@@ -325,10 +322,10 @@ h1 a {
 }
 
 #SonScore {
-    display : none;
+    display: none;
     border-radius: 10px;
-    background-color : #05081c ;
-    border:solid rgba(0, 0, 255, 0.493);
+    background-color: #05081c;
+    border: solid rgba(0, 0, 255, 0.493);
     color: white;
     padding: 1.5%;
     text-align: center;
@@ -337,14 +334,16 @@ h1 a {
 }
 
 #LesDonnes {
-    display : flex;
+    display: flex;
 }
+
 #LesScores {
-    display : flex;
+    display: flex;
     align-items: space-between;
 }
+
 #JouerPartie2 {
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -352,7 +351,7 @@ h1 a {
 }
 
 #Rejouer {
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -367,9 +366,8 @@ h1 a {
     display: none;
 }
 
-
 #GenererChiffreAleatoire {
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -377,9 +375,9 @@ h1 a {
 }
 
 #MessageErreur {
-    display : none;
+    display: none;
     border-radius: 20px;
-    background-color : #84D0F1;
+    background-color: #84D0F1;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 20px;
@@ -392,20 +390,21 @@ input:invalid {
 }
 
 input:valid {
-border: 2px solid #348DA3;
+    border: 2px solid #348DA3;
 }
 
 #AfficherNiveaux {
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
-#Robot{
+
+#Robot {
     margin-top: 9%;
-    margin-left: 35%;   
+    margin-left: 35%;
     width: 80%;
-    height: 80%; 
+    height: 80%;
     display: none;
 }
 
@@ -413,7 +412,6 @@ border: 2px solid #348DA3;
     padding: 1%;
     margin: 2%;
 }
-
 
 .button_click {
     font-size: 16px;
