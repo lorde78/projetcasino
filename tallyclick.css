@@ -388,8 +388,8 @@ section.tali{
     left:250px;
     margin-top:25px;
     border-radius:50px;
-    padding:20px;
-    padding-top:35px;
+    padding:25px;
+    padding-top:25px;
     word-break: normal;
 }
 
@@ -407,6 +407,17 @@ section.tali{
     position: absolute;
     left:520px;
     bottom:75px;
+}
+
+a.wikitally {
+    color:black;
+    font-size: 15px;
+    text-decoration: underline;
+    position:absolute;
+    left:75px;
+    bottom:21px;
+    color:blue;
+
 }
 
 @keyframes mouvement {
