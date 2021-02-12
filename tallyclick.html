@@ -27,27 +27,30 @@
     <main>
         <!-- Message de Lancement -->
         <h2></h2>
+        <h3>TallyClickGame</h3>
 
-        <!-- Boutons de difficultés -->
-        <button onclick="SetDiff('facile')">Difficulté 1 : Facile</button>
-        <button onclick="SetDiff('moyen')">Difficulté 2 : Moyen</button>
-        <button onclick="SetDiff('hard')">Difficulté 3 : Hard</button>
-        <button onclick="SetDiff('impossible')">Difficulté 4 : Impossible</button>
-
-        <!-- Lancer le jeu -->
-        <button onclick="Startgame()" id="launch">Lancer le jeu</button>
+        <!-- Les boutons -->
+        <aside id='menujeu'>
+            <!-- Boutons de difficultés -->
+            <button class='menu' onclick="SetDiff('facile')">Level 1 : Easy</button>
+            <button class='menu' onclick="SetDiff('moyen')">Level 2 : Medium</button>
+            <button class='menu' onclick="SetDiff('hard')">Level 3 : Hard</button>
+            <button class='menu' onclick="SetDiff('impossible')">Level 4 : Godlike</button>
+            <!-- Lancer le jeu -->
+            <button class='menu' onclick="Startgame()" id="launch">Start Clicking</button>
+        </aside>
 
         <!-- La fenêtre de jeu -->
         <article>
             <div class='limit-gauche'></div>
-            <div class='limit-droite'></div>
+            <div id="test"class='limit-droite'></div>
             <section>
 
             </section>
         </article>
 
-        <!-- Le clicker + le score -->
         <aside>
+            <!-- Le clicker -->
             <section class="tali">
                 <div id="tigefer"></div>
                 <div id="tigefer2"></div>
@@ -56,8 +59,19 @@
                 <span id="cliks">0 0 0 0</span>
                 <button id="pushclick" onclick="clique()">PUSH</button>
             </section>
+            <!-- Le score -->
             <section>
                 <p class="score">Votre score est de :</p>
+            </section>
+            <!-- L'infobulle -->
+            <section class="infobulle">
+                <section class="rightarrow"></section>
+                <p class="info">Pour démarrer le jeu vous devez sélectionner une des 4 difficultés ci-dessus, puis, appuyer sur "Start Clicking". 
+                    <br><br>
+                    Votre objectif est de comptabiliser les Neon-Men au moment exact où ils rentrent dans le Neon-Portal, ATTENTION A VOUS S'IL EN MANQUE !
+                </p>
+                <br>
+                <a class="wikitally" href="https://fr.wikipedia.org/wiki/Compteur_manuel" target="_blank">Lien vers la définition Wikipédia du TallyCounter</a>
             </section>
         </aside>
     </main>
